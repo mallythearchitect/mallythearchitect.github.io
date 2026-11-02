@@ -4,7 +4,8 @@ Three pages for the contractors, union training directors and employers who open
 emails: **Home** (who I am and the C-6 license I'm working toward), **Work** (Mally's Home Solutions, FOCUS,
 internships, hackathons) and **Resume** (a timeline, the details and the PDF).
 
-**Live at:** https://mallythearchitect.github.io (GitHub Pages, from the `docs/` folder of this repo's `main` branch).
+**Live at:** https://malachicollins.org (GitHub Pages, from the `docs/` folder of this repo's `main` branch; the domain is
+registered at Squarespace, and its DNS there points at GitHub). https://mallythearchitect.github.io redirects to it.
 Nothing goes live until a change is pushed, and a change is pushed only when I say yes.
 
 ## What's here
@@ -80,5 +81,5 @@ GitHub Pages, ruled **Adopt · Watch** on Nov 1, 2026.
 - **Fine line:** the free plan publishes only from a public repo, so these files are public too (they're the site
   anyway). Pages is for personal and project sites, not for running a business.
 - **Exit:** plain files. Moving them to AWS (S3 or the Lightsail box) or any other host takes about an hour. A domain
-  of my own can point here later.
+  of my own points here already (malachicollins.org).
 - **Watch:** GitHub's Pages terms or pricing changing.

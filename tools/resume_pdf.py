@@ -2,8 +2,9 @@
 
   python3 tools/resume_pdf.py "$HOME/Desktop/Malachi Collins's Resume-2026.docx"
 
-Reads the .docx with pandoc, removes every phone number, lays it out for Letter paper and prints
-it to docs/assets/Malachi-Collins-Resume.pdf with Chromium (Playwright). The Word file is only read.
+Reads the .docx with pandoc, removes every phone number, fixes the typos listed in FIXES, lays it out
+for Letter paper and prints it to docs/assets/Malachi-Collins-Resume.pdf with Chromium (Playwright).
+The Word file is only read.
 """
 from __future__ import annotations
 
@@ -17,6 +18,15 @@ from playwright.sync_api import sync_playwright
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs" / "assets" / "Malachi-Collins-Resume.pdf"
 PHONE = re.compile(r"\(?\b\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}\b")
+# Fixed in the public copy only (approved Nov 1, 2026); the Word file keeps its own wording.
+FIXES = {
+    "Practioneer": "Practitioner",
+    "Enginneerin": "Engineering",
+    "overing 200k": "over 200k",
+    "Issac Sim": "Isaac Sim",
+    "YOLONAS": "YOLO-NAS",
+    "BS in Information Systems &amp; Management": "BS in Management Information Systems and Management",
+}
 
 CSS = """
 @page { size: Letter; margin: 0.42in 0.55in; }
@@ -44,6 +54,10 @@ def build_html(docx: pathlib.Path) -> str:
     body = re.sub(PHONE.pattern + r"\s*\|\s*", "", body)
     if PHONE.search(body):
         raise SystemExit("A phone number is still in the resume text; not writing the PDF.")
+    for old, new in FIXES.items():
+        if old not in body:
+            print(f"note: '{old}' is no longer in the Word file")
+        body = body.replace(old, new)
     # the LinkedIn address as a working link
     body = re.sub(r"<u>(www\.linkedin\.com/[^<]+)</u>", r'<a href="https://\1">\1</a>', body)
     # name, contact line, section headings, entry lines with their dates on the right
