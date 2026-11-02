@@ -2,12 +2,14 @@
 
 Every saved change, newest first, in releases: one per day of work. Each release is a tag on GitHub (`vYYYY.MM.DD`, on the day's last change) and a GitHub release with the same list as its what-changed. A change that a later one took back out says so.
 
-Covers every saved change up to `ddb15ce` (1 Nov 2026): 5 saved changes in 1 release, from 1 Nov 2026 to 1 Nov 2026. Rebuilt with `python3 scripts/changelog.py --log-only`; once it is saved, `--tags-only`, `git push --follow-tags` and `--releases` tag the day and publish it, so the change that saves this file is tagged too.
+Covers every saved change up to `fdacb25` (1 Nov 2026): 7 saved changes in 1 release, from 1 Nov 2026 to 1 Nov 2026. Rebuilt with `python3 scripts/changelog.py --log-only`; once it is saved, `--tags-only`, `git push --follow-tags` and `--releases` tag the day and publish it, so the change that saves this file is tagged too.
 
 ## v2026.11.01 · Sunday 1 November 2026
 
-5 saved changes
+7 saved changes
 
+- `fdacb25` The portfolio becomes a section of the site: docs/portfolio, a Projects page with all 21 projects, the Trade Door Finder chart and the AI sessions map
+- `c62f53e` CHANGELOG.md: the day's changes
 - `ddb15ce` README: live at mallythearchitect.github.io for now, and the steps that move it to malachicollins.org
 - `2d3529b` CHANGELOG.md: the day's changes
 - `1eb7567` Resume PDF with its typos fixed and the degree named as in my emails; links point at malachicollins.org
