@@ -4,8 +4,9 @@ Three pages for the contractors, union training directors and employers who open
 emails: **Home** (who I am and the C-6 license I'm working toward), **Work** (Mally's Home Solutions, FOCUS,
 internships, hackathons) and **Resume** (a timeline, the details and the PDF).
 
-**Live at:** https://malachicollins.org (GitHub Pages, from the `docs/` folder of this repo's `main` branch; the domain is
-registered at Squarespace, and its DNS there points at GitHub). https://mallythearchitect.github.io redirects to it.
+**Live at:** https://mallythearchitect.github.io (GitHub Pages, from the `docs/` folder of this repo's `main` branch).
+**Its home will be https://malachicollins.org** (registered at Squarespace on Nov 1, 2026) once the DNS steps below are
+done; from then on the github.io address forwards to it, so links already sent keep working.
 Nothing goes live until a change is pushed, and a change is pushed only when I say yes.
 
 ## What's here
@@ -21,6 +22,28 @@ Nothing goes live until a change is pushed, and a change is pushed only when I s
 | `tools/resume_pdf.py` | Rebuilds the resume PDF from the Word file |
 | `tools/make_images.py` | Redraws the phone icon and the link-preview card |
 | `scripts/changelog.py` | Writes CHANGELOG.md and tags a release a day, the same as my other repos |
+
+## Move it to malachicollins.org
+
+1. **At Squarespace** (account.squarespace.com → Domains → malachicollins.org → DNS): delete the **Squarespace Defaults**
+   preset, then add these custom records. Leave the `v=spf1 -all` text record.
+
+   | Type | Host | Data |
+   |---|---|---|
+   | A | @ | 185.199.108.153 |
+   | A | @ | 185.199.109.153 |
+   | A | @ | 185.199.110.153 |
+   | A | @ | 185.199.111.153 |
+   | CNAME | www | mallythearchitect.github.io |
+
+2. **Check they're live:** `dig +short @nsd1.squarespacedns.com malachicollins.org A` lists the four 185.199.x.153
+   addresses, and `dig +short @nsd1.squarespacedns.com www.malachicollins.org` says `mallythearchitect.github.io.`
+3. **Tell GitHub:** `echo malachicollins.org > docs/CNAME`, save it, push (on my yes).
+4. **HTTPS:** once GitHub has the certificate (Settings → Pages says so, usually within the hour):
+   `gh api -X PUT repos/mallythearchitect/mallythearchitect.github.io/pages -F https_enforced=true`
+5. **Optional, recommended:** verify the domain on GitHub (profile Settings → Pages → Add a domain) and add the TXT record
+   it gives at Squarespace, so nobody else can ever claim it on GitHub.
+6. **The emails:** put `https://malachicollins.org` in Trade Doors → Emails → Portfolio link.
 
 ## Look at it on this Mac
 
@@ -81,5 +104,5 @@ GitHub Pages, ruled **Adopt · Watch** on Nov 1, 2026.
 - **Fine line:** the free plan publishes only from a public repo, so these files are public too (they're the site
   anyway). Pages is for personal and project sites, not for running a business.
 - **Exit:** plain files. Moving them to AWS (S3 or the Lightsail box) or any other host takes about an hour. A domain
-  of my own points here already (malachicollins.org).
+  of my own, malachicollins.org, points here once its DNS is set.
 - **Watch:** GitHub's Pages terms or pricing changing.
