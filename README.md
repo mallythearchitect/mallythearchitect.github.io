@@ -1,23 +1,27 @@
 # Malachi Collins: portfolio
 
-Three pages for the contractors, union training directors and employers who open the link in my apprenticeship
-emails: **Home** (who I am and the C-6 license I'm working toward), **Work** (Mally's Home Solutions, FOCUS,
-internships, hackathons) and **Resume** (a timeline, the details and the PDF).
+The portfolio section of my website, for the contractors, union training directors and employers who open the link in
+my apprenticeship emails: **Home** (who I am and the C-6 license I'm working toward), **Work** (Mally's Home Solutions
+and FOCUS in depth, internships, hackathons), **Projects** (all 21 projects, the Trade Door Finder chart and a map of my
+AI sessions) and **Resume** (a timeline, the details and the PDF). It lives in its own folder, `docs/portfolio/`, so the
+bigger site can wrap around it later; until that site exists, the domain's front page forwards to it.
 
-**Live at:** https://mallythearchitect.github.io (GitHub Pages, from the `docs/` folder of this repo's `main` branch).
-**Its home will be https://malachicollins.org** (registered at Squarespace on Nov 1, 2026) once the DNS steps below are
-done; from then on the github.io address forwards to it, so links already sent keep working.
+**Live at:** https://mallythearchitect.github.io/portfolio/ (GitHub Pages, from the `docs/` folder of this repo's `main`
+branch). **Its home will be https://malachicollins.org/portfolio/** (the domain was registered at Squarespace on Nov 1,
+2026) once the DNS steps below are done; from then on the github.io address forwards to it, so links already sent keep
+working.
 Nothing goes live until a change is pushed, and a change is pushed only when I say yes.
 
 ## What's here
 
 | Path | What it is |
 |---|---|
-| `docs/` | The website, exactly as published: `index.html`, `work.html`, `resume.html`, `404.html` |
-| `docs/assets/site.css` | The one stylesheet: phone-first, light and dark follow the device |
-| `docs/assets/icons.svg` | The line icons the pages use |
-| `docs/assets/img/` | Screenshots (`mhs-*` from Mally's, `focus-*` from the FOCUS demo), the phone icon and the link-preview card |
-| `docs/assets/Malachi-Collins-Resume.pdf` | The resume, made from the Word file with the phone number taken out |
+| `docs/` | Everything GitHub Pages publishes. `index.html` forwards to the portfolio for now; `404.html` is the not-found page |
+| `docs/portfolio/` | The portfolio section, self-contained: `index.html`, `work.html`, `projects.html`, `resume.html` |
+| `docs/portfolio/assets/site.css` | The one stylesheet: phone-first, light and dark follow the device |
+| `docs/portfolio/assets/icons.svg` | The line icons the pages use |
+| `docs/portfolio/assets/img/` | Screenshots (`mhs-*` from Mally's, `focus-*` from the FOCUS demo), the phone icon and the link-preview card |
+| `docs/portfolio/assets/Malachi-Collins-Resume.pdf` | The resume, made from the Word file with the phone number and typos fixed |
 | `tools/shots.py` | Retakes the screenshots, hiding private details first and refusing to save one that still shows any |
 | `tools/resume_pdf.py` | Rebuilds the resume PDF from the Word file |
 | `tools/make_images.py` | Redraws the phone icon and the link-preview card |
@@ -43,7 +47,7 @@ Nothing goes live until a change is pushed, and a change is pushed only when I s
    `gh api -X PUT repos/mallythearchitect/mallythearchitect.github.io/pages -F https_enforced=true`
 5. **Optional, recommended:** verify the domain on GitHub (profile Settings → Pages → Add a domain) and add the TXT record
    it gives at Squarespace, so nobody else can ever claim it on GitHub.
-6. **The emails:** put `https://malachicollins.org` in Trade Doors → Emails → Portfolio link.
+6. **The emails:** put `https://malachicollins.org/portfolio/` in Trade Doors → Emails → Portfolio link.
 
 ## Look at it on this Mac
 
@@ -51,13 +55,14 @@ Nothing goes live until a change is pushed, and a change is pushed only when I s
 python3 -m http.server 8791 --bind 127.0.0.1 --directory docs
 ```
 
-Then open http://127.0.0.1:8791.
+Then open http://127.0.0.1:8791/portfolio/.
 
 ## What never goes on it
 
 - My home address, my phone number, money, and anything about customers (names, addresses, jobs, what they paid).
 - Company work from internships: words only, no screenshots.
-- Anything from the research map, the career system or the Trade Door Finder's research.
+- Journal and Self content, and the personal areas of the research map (only work areas' session counts are shown).
+- The Trade Door Finder's company details: only counts by county and trade.
 
 The screenshots come from **copies** of the apps, never the live ones. Mally's shots hide the goals, the business
 numbers, Right now, the customers-per-town column and the stock photo before each picture is taken, and

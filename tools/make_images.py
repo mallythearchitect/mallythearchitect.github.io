@@ -9,7 +9,7 @@ import pathlib
 from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-IMG = ROOT / "docs" / "assets" / "img"
+IMG = ROOT / "docs" / "portfolio" / "assets" / "img"
 
 ICON = """<html><body style="margin:0;background:#0b0b0b;width:180px;height:180px;display:grid;place-items:center;
 font:700 72px system-ui,-apple-system,Helvetica,Arial,sans-serif;color:#f9f9f7;letter-spacing:-1px">MC</body></html>"""

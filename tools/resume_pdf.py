@@ -16,7 +16,7 @@ import sys
 from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-OUT = ROOT / "docs" / "assets" / "Malachi-Collins-Resume.pdf"
+OUT = ROOT / "docs" / "portfolio" / "assets" / "Malachi-Collins-Resume.pdf"
 PHONE = re.compile(r"\(?\b\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}\b")
 # Fixed in the public copy only (approved Nov 1, 2026); the Word file keeps its own wording.
 FIXES = {

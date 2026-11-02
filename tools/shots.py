@@ -25,7 +25,7 @@ from PIL import Image
 from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-OUT = ROOT / "docs" / "assets" / "img"
+OUT = ROOT / "docs" / "portfolio" / "assets" / "img"
 MHS = "http://127.0.0.1:8799"
 FOCUS = "http://127.0.0.1:8780"
 
