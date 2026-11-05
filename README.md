@@ -1,9 +1,10 @@
 # Malachi Collins: portfolio
 
 The portfolio section of my website, for the contractors, union training directors and employers who open the link in
-my apprenticeship emails: **Home** (who I am and the C-6 license I'm working toward), **Work** (Mally's Home Solutions
-and FOCUS in depth, internships, hackathons), **Projects** (all 21 projects, the Trade Door Finder chart and a map of my
-AI sessions) and **Resume** (a timeline, the details and the PDF). It lives in its own folder, `docs/portfolio/`, so the
+my apprenticeship emails: **Home** (who I am, the C-6, E-2 and P-2 licenses I'm interested in, my technical skill set
+and why the trades), **Work** (the software behind Mally's Home Solutions, FOCUS as my personal ERP, and both internships
+shown with drawn mock-ups), **Projects** (research that turns into leads, tools and models, the power-grid AI and how I
+work) and **Resume** (a work timeline you can hover and click, the details, skills and the PDF). It lives in its own folder, `docs/portfolio/`, so the
 bigger site can wrap around it later; until that site exists, the domain's front page forwards to it.
 
 **Live at:** https://malachicollins.org/portfolio/ (GitHub Pages, from the `docs/` folder of this repo's `main` branch;
@@ -17,7 +18,8 @@ Nothing goes live until a change is pushed, and a change is pushed only when I s
 |---|---|
 | `docs/` | Everything GitHub Pages publishes. `index.html` forwards to the portfolio for now; `404.html` is the not-found page |
 | `docs/portfolio/` | The portfolio section, self-contained: `index.html`, `work.html`, `projects.html`, `resume.html` |
-| `docs/portfolio/assets/site.css` | The one stylesheet: phone-first, light and dark follow the device |
+| `docs/portfolio/assets/site.css` | The one stylesheet: phone-first, light and dark follow the device, motion only when the device allows it |
+| `docs/portfolio/assets/site.js` | Small touches of motion (fade-ins, count-ups, a pointer spotlight). Every page works without it |
 | `docs/portfolio/assets/icons.svg` | The line icons the pages use |
 | `docs/portfolio/assets/img/` | My headshot (`headshot.webp`, on Home), screenshots (`mhs-*` from Mally's, `focus-*` from the FOCUS demo), the phone icon and the link-preview card |
 | `docs/portfolio/assets/Malachi-Collins-Resume.pdf` | The resume, made from the Word file with the phone number and typos fixed |
@@ -58,8 +60,10 @@ Then open http://127.0.0.1:8791/portfolio/.
 
 ## What never goes on it
 
-- My home address, my phone number, money, and anything about customers (names, addresses, jobs, what they paid).
-- Company work from internships: words only, no screenshots.
+- My home address, my personal money, and anything about customers (names, addresses, jobs, what they paid). My phone
+  number is on it by choice, since Nov 5, 2026.
+- Company work from internships: words and drawn mock-ups only, with made-up names and numbers and a label saying so.
+  No screenshots, no real data.
 - Journal and Self content, and the personal areas of the research map (only work areas' session counts are shown).
 - The Trade Door Finder's company details: only counts by county and trade.
 

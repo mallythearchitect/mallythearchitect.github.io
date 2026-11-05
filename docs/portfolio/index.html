@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Malachi Collins · Portfolio</title>
-<meta name="description" content="CCSU senior in information systems and cybersecurity, looking for part-time, registered apprentice hours toward a Connecticut C-6 low-voltage license.">
+<meta name="description" content="CCSU senior in information systems and AI, looking for part-time, registered apprentice hours toward a Connecticut low-voltage, electrical or plumbing license.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Malachi Collins · Portfolio">
-<meta property="og:description" content="Looking for part-time, registered apprentice hours toward a Connecticut C-6 low-voltage license.">
+<meta property="og:description" content="Looking for part-time, registered apprentice hours toward a Connecticut C-6, E-2 or P-2 license.">
 <meta property="og:url" content="https://malachicollins.org/portfolio/">
 <meta property="og:image" content="https://malachicollins.org/portfolio/assets/img/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -16,6 +16,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -32,14 +33,46 @@
 </header>
 
 <main id="main">
-  <div class="wrap">
-    <section class="hero" aria-labelledby="hello">
-      <div>
-        <img class="headshot" src="assets/img/headshot.webp" width="480" height="480" alt="Malachi Collins" decoding="async">
-        <div class="kicker">Portfolio</div>
+  <div class="stage">
+    <svg class="traces" viewBox="0 0 760 620" aria-hidden="true" focusable="false">
+      <path class="base t-lv" d="M0 120H260Q280 120 280 140V200Q280 220 300 220H560Q580 220 580 200V80Q580 60 600 60H760"/>
+      <path class="flow t-lv" d="M0 120H260Q280 120 280 140V200Q280 220 300 220H560Q580 220 580 200V80Q580 60 600 60H760"/>
+      <path class="base t-el" d="M0 300H180Q200 300 200 320V360Q200 380 220 380H470Q490 380 490 360V300Q490 280 510 280H760"/>
+      <path class="flow t-el" d="M0 300H180Q200 300 200 320V360Q200 380 220 380H470Q490 380 490 360V300Q490 280 510 280H760"/>
+      <path class="base t-pl" d="M0 520H320Q340 520 340 500V470Q340 450 360 450H620Q640 450 640 470V560Q640 580 660 580H760"/>
+      <path class="flow t-pl" d="M0 520H320Q340 520 340 500V470Q340 450 360 450H620Q640 450 640 470V560Q640 580 660 580H760"/>
+      <circle class="n-lv" cx="140" cy="120" r="4"/><circle class="n-lv" cx="420" cy="220" r="5"/><circle class="n-lv" cx="680" cy="60" r="4"/>
+      <circle class="n-el" cx="90" cy="300" r="4"/><circle class="n-el" cx="340" cy="380" r="5"/><circle class="n-el" cx="630" cy="280" r="4"/>
+      <circle class="n-pl" cx="220" cy="520" r="4"/><circle class="n-pl" cx="500" cy="450" r="5"/><circle class="n-pl" cx="710" cy="580" r="4"/>
+    </svg>
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hello">
+        <div class="hero-id">
+          <img class="headshot" src="assets/img/headshot.webp" width="480" height="480" alt="Malachi Collins" decoding="async">
+          <span class="status"><i aria-hidden="true"></i>Open to part-time apprentice hours</span>
+        </div>
         <h1 id="hello">Malachi Collins</h1>
-        <p class="lead">I'm looking for part-time, registered apprentice hours toward a Connecticut <span class="nb">C-6</span> low-voltage license.</p>
-        <p class="sub">I'm a senior at Central Connecticut State University in Management Information Systems and Management, with minors in cybersecurity and AI. I also run a small exterior home-services business, and I built the software it runs on.</p>
+        <p class="lead">I'm looking for part-time, registered apprentice hours toward one of these Connecticut licenses.</p>
+        <nav class="lic-stack" aria-labelledby="lic-h">
+          <div class="label" id="lic-h">Licenses I'm interested in</div>
+          <a class="lic lv" href="#c6">
+            <span class="code-badge" aria-hidden="true">C-6</span>
+            <span class="t"><strong><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chip"/></svg>Low voltage</strong><small>Limited journeyperson · 4,000 hours</small></span>
+            <svg class="icon go" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg>
+          </a>
+          <a class="lic el" href="#e2">
+            <span class="code-badge" aria-hidden="true">E-2</span>
+            <span class="t"><strong><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-bolt"/></svg>Electrical</strong><small>Apprentice start · 8,000 hours</small></span>
+            <svg class="icon go" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg>
+          </a>
+          <a class="lic pl" href="#p2">
+            <span class="code-badge" aria-hidden="true">P-2</span>
+            <span class="t"><strong><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-drop"/></svg>Plumbing</strong><small>Apprentice start · P-6 at 2,000 hours</small></span>
+            <svg class="icon go" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg>
+          </a>
+          <p class="lic-note">Pick one to see where I fit.</p>
+        </nav>
+        <p class="sub">I'm a senior at Central Connecticut State University in Management Information Systems and Management, with a minor in AI. I've also run my own home-services business, and I built the software behind it: routes, maps, customers and follow-ups in one app.</p>
         <div class="meta">
           <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-pin"/></svg>Hartford, CT</span>
           <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-cap"/></svg>CCSU, class of 2027</span>
@@ -49,100 +82,163 @@
           <a class="btn" href="https://www.linkedin.com/in/malachi-collins/" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-linkedin"/></svg>LinkedIn</a>
           <a class="btn" href="assets/Malachi-Collins-Resume.pdf"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-file"/></svg>Resume (PDF)</a>
         </div>
-      </div>
-      <aside class="hero-card" aria-label="The license I'm working toward">
-        <div class="label">The license I'm working toward</div>
-        <div class="target">
-          <div class="badge-big" aria-hidden="true">C-6</div>
-          <div><strong>Limited journeyperson, low voltage</strong><span>Connecticut: alarm, sound, telecom and data systems, up to 48 volts</span></div>
-        </div>
-        <div class="covers" aria-label="What the work covers">
-          <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg>Alarms</span>
-          <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-camera"/></svg>Cameras</span>
-          <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-shield"/></svg>Access control</span>
-          <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-network"/></svg>Data cabling</span>
-        </div>
-      </aside>
-    </section>
+      </section>
+    </div>
+  </div>
 
-    <section class="section" aria-labelledby="glance">
-      <div class="section-head"><h2 id="glance">At a glance</h2></div>
-      <div class="tiles">
-        <div class="tile">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-cloud"/></svg></div>
+  <div class="wrap">
+    <section class="band" id="skills" aria-labelledby="skills-h">
+      <div class="band-head">
+        <span class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-code"/></svg>Technical skill set</span>
+        <h2 class="display" id="skills-h">Information systems and AI, put to work.</h2>
+        <p class="sub">What I'd bring to a shop from day one: the data, tracking and automation skills I've used at two internships and in my own business.</p>
+      </div>
+      <div class="bento">
+        <article class="bcard b-hustle">
+          <span class="tag"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-truck"/></svg>My side hustle</span>
+          <h3>I built the software that ran my home-services business.</h3>
+          <p>Route optimizers, maps, customer tracking and follow-ups, a written procedure for every service, and the data to decide which towns to grow into next.</p>
+          <div class="mini-stats">
+            <div><b>14</b><span>tools in one app</span></div>
+            <div><b>46</b><span>towns scored for growth</span></div>
+            <div><b>17</b><span>services, step by step</span></div>
+          </div>
+          <a class="more" href="work.html#mallys">See the software<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></a>
+          <div class="peek"><img src="assets/img/mhs-decide.webp" width="1600" height="1000" alt="A Connecticut town map colored by score next to a ranked list of towns." loading="lazy"></div>
+        </article>
+        <article class="bcard b-ai">
+          <span class="tag"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-spark"/></svg>AI</span>
+          <div class="big-num grad-ai" data-count="1018">1,018</div>
+          <p>AI sessions since April 2026. The tools, engines and knowledge bases I've built with them have saved me months of work.</p>
+          <div class="chips plain"><span>Tools</span><span>Engines</span><span>Knowledge bases</span><span>Automations</span></div>
+        </article>
+        <article class="bcard b-cloud">
+          <span class="tag"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-cloud"/></svg>Cloud</span>
           <h3>AWS Certified Cloud Practitioner</h3>
-          <p>Certified in cloud fundamentals.</p>
-        </div>
-        <div class="tile">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-building"/></svg></div>
-          <h3>Two internships</h3>
-          <p>Program management at Leonardo DRS. Data and reporting at Trumpf.</p>
-        </div>
-        <div class="tile">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-truck"/></svg></div>
-          <h3>My own business</h3>
-          <p>Mally's Home Solutions: bin cleaning, pressure washing, gutters and cleanouts.</p>
-        </div>
-        <div class="tile">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-shield"/></svg></div>
-          <h3>Cybersecurity minor</h3>
-          <p>Networks and security, hands-on with Wireshark and Cisco Packet Tracer.</p>
-        </div>
+          <p>Certified in how cloud systems are built, run and kept secure.</p>
+        </article>
+        <article class="bcard b-intern">
+          <span class="tag"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-building"/></svg>Internships · Leonardo DRS and Trumpf</span>
+          <h3>Data, reporting and forecasting</h3>
+          <ul class="caps">
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg>Data tracking and reporting</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg>Analytical tools and price estimators built from past jobs</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg>Training modules that keep teams current as the tech changes</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg>Forecasting and predictive models for financials</li>
+          </ul>
+          <a class="more" href="work.html#internships">See what that looks like<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></a>
+        </article>
+        <article class="bcard b-stack">
+          <span class="tag"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-tools"/></svg>Toolkit</span>
+          <h3>What I build with</h3>
+          <div class="chips plain"><span>Python</span><span>SQL</span><span>Excel</span><span>Power BI</span><span>pandas</span><span>FastAPI</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>AWS</span><span>AI APIs</span><span>Git</span></div>
+          <a class="more" href="resume.html#skills-h">All my skills<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></a>
+        </article>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="why">
-      <div class="section-head">
-        <h2 id="why">Why low voltage</h2>
-        <p class="sub">Alarms, cameras and access control all run on networks now. That's where my schooling already points.</p>
+    <section class="band" id="why" aria-labelledby="why-h">
+      <div class="band-head">
+        <span class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-tools"/></svg>Why the trades</span>
+        <h2 class="display" id="why-h">Hands-on skills to match my <span class="grad">software.</span></h2>
+        <p class="sub">I've spent years building systems on a screen. A trade puts my hands on the real ones. Put the two together and I can do the work, and build the tools that make the work easier.</p>
       </div>
-      <div class="pairs">
-        <div class="pair">
-          <div class="work"><span class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg></span><div><small>The work</small><strong>Alarms and access control</strong></div></div>
-          <div class="arrow" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#i-arrow"/></svg></div>
-          <div class="bring"><span class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-shield"/></svg></span><div><small>What I bring</small><strong>Cybersecurity minor:</strong> how systems are secured, and how they get attacked.</div></div>
-        </div>
-        <div class="pair">
-          <div class="work"><span class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-camera"/></svg></span><div><small>The work</small><strong>Cameras and data networks</strong></div></div>
-          <div class="arrow" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#i-arrow"/></svg></div>
-          <div class="bring"><span class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-network"/></svg></span><div><small>What I bring</small><strong>Network coursework:</strong> routing, Wireshark, Cisco Packet Tracer.</div></div>
-        </div>
-        <div class="pair">
-          <div class="work"><span class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-tools"/></svg></span><div><small>The work</small><strong>Service calls for customers</strong></div></div>
-          <div class="arrow" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#i-arrow"/></svg></div>
-          <div class="bring"><span class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-truck"/></svg></span><div><small>What I bring</small><strong>My own jobs:</strong> I quote them, show up with the kit, follow a checklist and follow up.</div></div>
-        </div>
+      <div class="pillars">
+        <article class="pillar">
+          <span class="app-ico amber" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#i-plug"/></svg></span>
+          <h3>Learn the hardware</h3>
+          <p>Wiring, piping and the systems inside a building, learned the right way: on the job, next to a licensed pro.</p>
+        </article>
+        <article class="pillar">
+          <span class="app-ico" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#i-code"/></svg></span>
+          <h3>Bring the software</h3>
+          <p>Tracking tools, reports and forecasts that help a shop quote faster, schedule better and see what's coming.</p>
+        </article>
+        <article class="pillar">
+          <span class="app-ico teal" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#i-cycle"/></svg></span>
+          <h3>Put them together</h3>
+          <p>Buildings run on more connected systems every year. I want to be the apprentice who understands both sides of the job.</p>
+        </article>
       </div>
+
+      <h3 class="subhead" id="licenses">Where I fit</h3>
+      <p class="sub">Three Connecticut licenses, one starting point: registered apprentice hours.</p>
+      <div class="compare">
+        <article class="lcol lv" id="c6" aria-labelledby="c6-h">
+          <div class="lcol-top">
+            <span class="code-badge" aria-hidden="true">C-6</span>
+            <div><h3 id="c6-h">Low voltage</h3><small>Limited journeyperson</small></div>
+          </div>
+          <dl class="specs">
+            <div><dt>On the job</dt><dd>4,000 hours</dd></div>
+            <div><dt>Classroom</dt><dd>288 hours</dd></div>
+            <div><dt>Covers</dt><dd>Low-voltage and data systems, up to 48 volts</dd></div>
+          </dl>
+          <p class="why"><b>Closest to my degree.</b> Low voltage is where a building meets its network and data, the side I already know. I can be useful on day one and grow from there.</p>
+          <div class="path" aria-label="The path"><span>Apprentice</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg><span class="on">C-6</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg><span>C-5 contractor</span></div>
+        </article>
+        <article class="lcol el" id="e2" aria-labelledby="e2-h">
+          <div class="lcol-top">
+            <span class="code-badge" aria-hidden="true">E-2</span>
+            <div><h3 id="e2-h">Electrical</h3><small>Unlimited journeyperson</small></div>
+          </div>
+          <dl class="specs">
+            <div><dt>On the job</dt><dd>8,000 hours</dd></div>
+            <div><dt>Classroom</dt><dd>576 to 720 hours</dd></div>
+            <div><dt>Covers</dt><dd>All electrical work, low voltage included</dd></div>
+          </dl>
+          <p class="why"><b>Everything I build runs on power.</b> I want to learn electrical work from the panel out, and bring the estimating and reporting skills from my internships to the shop.</p>
+          <div class="path" aria-label="The path"><span>Apprentice</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg><span class="on">E-2</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg><span>E-1 contractor</span></div>
+        </article>
+        <article class="lcol pl" id="p2" aria-labelledby="p2-h">
+          <div class="lcol-top">
+            <span class="code-badge" aria-hidden="true">P-2</span>
+            <div><h3 id="p2-h">Plumbing</h3><small>Unlimited journeyperson</small></div>
+          </div>
+          <dl class="specs">
+            <div><dt>On the job</dt><dd>8,000 hours</dd></div>
+            <div><dt>Classroom</dt><dd>576 hours</dd></div>
+            <div><dt>Shorter start</dt><dd>P-6 (water, sewer and storm lines) at 2,000 hours</dd></div>
+          </dl>
+          <p class="why"><b>My field work already leads here.</b> Cleanouts and exterior jobs from my side hustle often turn into plumbing work. I already quote jobs, bring the right kit and follow written steps.</p>
+          <div class="path" aria-label="The path"><span>Apprentice</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg><span class="on">P-6 or P-2</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg><span>P-1 contractor</span></div>
+        </article>
+      </div>
+      <p class="apprentice-note"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span>Every one of these starts the same way: a licensed contractor hires me and registers me with the CT Department of Labor, and my hours count from day one. Even a one-person shop can take one apprentice.</span></p>
     </section>
 
-    <section class="section" aria-labelledby="mywork">
-      <div class="section-head"><h2 id="mywork">My work</h2></div>
+    <section class="band" id="mywork" aria-labelledby="mywork-h">
+      <div class="band-head">
+        <span class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-star"/></svg>My work</span>
+        <h2 class="display" id="mywork-h">Things I've built and run.</h2>
+      </div>
       <div class="cards two-up">
         <a class="card" href="work.html#mallys">
           <div class="pic"><img src="assets/img/mhs-console.webp" width="1600" height="825" alt="The Mally's Home Solutions app's home screen: a row of app tiles." loading="lazy"></div>
-          <div class="body"><h3>Mally's Home Solutions</h3><p>My exterior home-services business, and the app I built to run it.</p><span class="more">See it<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
+          <div class="body"><h3>Mally's Home Solutions</h3><p>My side hustle, and the app I built to run it: routes, maps, customers, follow-ups and growth planning.</p><span class="more">See it<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
         </a>
         <a class="card" href="work.html#focus">
           <div class="pic"><img src="assets/img/focus-home.webp" width="1600" height="700" alt="The FOCUS home screen: a search box and a row of app tiles." loading="lazy"></div>
-          <div class="body"><h3>FOCUS</h3><p>My data engine: it tracks numbers, forecasts what's next and runs routine jobs on its own.</p><span class="more">See it<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
+          <div class="body"><h3>FOCUS</h3><p>My personal ERP: money, plans and requests in one place, with their status and a forecast of what's next.</p><span class="more">See it<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
         </a>
         <a class="card" href="work.html#internships">
           <div class="pic text-pic"><ul><li><b>Leonardo DRS</b><span>Summer 2026</span></li><li><b>Trumpf</b><span>Spring 2026</span></li></ul></div>
-          <div class="body"><h3>Internships</h3><p>Dashboards, pricing tools and data models at Leonardo DRS and Trumpf.</p><span class="more">See it<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
+          <div class="body"><h3>Internships</h3><p>Program dashboards, price estimators and customer analytics, with mock-ups that show what I built.</p><span class="more">See it<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
         </a>
-        <a class="card" href="work.html#competitions">
-          <div class="pic text-pic"><ul><li><b>YQuantum, Yale</b><span>Apr 2026</span></li><li><b>Travelers case</b><span>Apr 2026</span></li><li><b>CCSU team builds</b><span>2025–26</span></li></ul></div>
-          <div class="body"><h3>Hackathons and projects</h3><p>A quantum hackathon at Yale, a Travelers case competition and team builds at CCSU.</p><span class="more">See it<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
+        <a class="card" href="projects.html#grid">
+          <div class="pic text-pic"><ul><li><b>58</b><span>substations simulated</span></li><li><b>345 kV</b><span>transmission loop</span></li><li><b>1 AI</b><span>that responds to demand spikes</span></li></ul></div>
+          <div class="body"><h3>Power-grid AI</h3><p>A hackathon build: a simulated city power grid, and an AI that steps in when data centers suddenly pull more power.</p><span class="more">See it<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
         </a>
       </div>
-      <div class="actions" style="margin-top:16px"><a class="btn" href="projects.html"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-layout"/></svg>See all 21 projects</a></div>
+      <div class="actions" style="margin-top:18px"><a class="btn" href="projects.html"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-layout"/></svg>See more projects</a></div>
     </section>
 
     <section class="cta" aria-labelledby="talk">
       <h2 id="talk">Have room for a part-time apprentice?</h2>
-      <p>I'd like to hear from you. Email is the fastest way to reach me.</p>
+      <p>I'd like to hear from you. Email or call, whichever's easier.</p>
       <div class="actions">
         <a class="btn primary" href="mailto:malachibcollins@gmail.com"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-mail"/></svg>malachibcollins@gmail.com</a>
+        <a class="btn" href="tel:+12033833089"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"/></svg>(203) 383-3089</a>
         <a class="btn" href="https://www.linkedin.com/in/malachi-collins/" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-linkedin"/></svg>LinkedIn</a>
       </div>
     </section>
@@ -154,6 +250,7 @@
     <span>Malachi Collins · Hartford, CT</span>
     <nav aria-label="Contact">
       <a href="mailto:malachibcollins@gmail.com">Email</a>
+      <a href="tel:+12033833089">(203) 383-3089</a>
       <a href="https://www.linkedin.com/in/malachi-collins/" rel="noopener">LinkedIn</a>
       <a href="assets/Malachi-Collins-Resume.pdf">Resume (PDF)</a>
     </nav>

@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Work · Malachi Collins</title>
-<meta name="description" content="The business I run, the software I built for it, my data engine, two internships, and the hackathons and team projects I've taken part in.">
+<meta name="description" content="The software I built to run my side hustle, my personal ERP, and two internships in data, reporting and forecasting, shown with mock-ups.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Work · Malachi Collins">
-<meta property="og:description" content="My business and the app I built to run it, my data engine, two internships, hackathons and team projects.">
+<meta property="og:description" content="My side hustle's software, my personal ERP, and two internships, shown with mock-ups.">
 <meta property="og:url" content="https://malachicollins.org/portfolio/work.html">
 <meta property="og:image" content="https://malachicollins.org/portfolio/assets/img/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -16,6 +16,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -35,43 +36,56 @@
   <div class="wrap">
     <section class="section" aria-labelledby="top">
       <div class="section-head">
-        <h1 id="top">My work</h1>
-        <p class="lead">Two systems I built and use, two internships, and the competitions and team projects I've taken part in.</p>
+        <span class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-briefcase"/></svg>My work</span>
+        <h1 id="top">The systems I've built, and what they did.</h1>
+        <p class="lead">The software behind my side hustle, my personal ERP, and two internships in data, reporting and forecasting.</p>
       </div>
       <nav class="jump" aria-label="On this page">
         <a href="#mallys"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-truck"/></svg>Mally's Home Solutions</a>
         <a href="#focus"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-database"/></svg>FOCUS</a>
         <a href="#internships"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-building"/></svg>Internships</a>
-        <a href="#competitions"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-trophy"/></svg>Hackathons and projects</a>
-        <a href="projects.html"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-layout"/></svg>All 21 projects</a>
+        <a href="projects.html"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-layout"/></svg>More projects</a>
       </nav>
     </section>
 
     <section class="project" id="mallys" aria-labelledby="mallys-h">
       <div class="project-head">
-        <div class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-truck"/></svg>My business</div>
+        <div class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-truck"/></svg>My side hustle</div>
         <h2 id="mallys-h">Mally's Home Solutions</h2>
-        <p class="sub">Exterior home services in Fairfield County, CT. I do the jobs myself, and I built the app the business runs on: jobs, quotes, follow-ups, maps and a written procedure for every service.</p>
+        <p class="sub">An exterior home-services business I ran part-time in Fairfield County, alongside a full-time job and school. Today it takes work by referral only. The real story is the software: I built my own systems to run it.</p>
       </div>
-      <div class="label-row">Jobs I've done</div>
-      <div class="chips">
-        <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg>Bin cleaning</span>
-        <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg>Pressure washing</span>
-        <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg>Gutter cleaning</span>
-        <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg>Window cleaning</span>
-        <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg>Junk removal</span>
-        <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg>Estate cleanout</span>
+      <div class="tiles">
+        <div class="tile">
+          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-list"/></svg></div>
+          <h3>Process management</h3>
+          <p>A written procedure for all 17 services: the kit to bring, then each job step, with a photo for every step.</p>
+        </div>
+        <div class="tile">
+          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-people"/></svg></div>
+          <h3>Customer management</h3>
+          <p>Customers, quotes and follow-ups in one place, so every lead gets a next step and nobody slips through.</p>
+        </div>
+        <div class="tile">
+          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-route"/></svg></div>
+          <h3>Routes and maps</h3>
+          <p>Pickup-day route maps and a door-knock tracker, so a day of driving and selling is planned before I leave.</p>
+        </div>
+        <div class="tile">
+          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-trend"/></svg></div>
+          <h3>Data for expansion</h3>
+          <p>46 Connecticut towns scored on income, shopping plazas, prospects and competition to decide where to grow next.</p>
+        </div>
       </div>
       <div class="label-row">The app</div>
       <div class="tiles">
-        <div class="stat"><b>17</b><span>services planned out, each with its kit and job steps</span></div>
-        <div class="stat"><b>46</b><span>Connecticut towns scored to decide where to grow</span></div>
-        <div class="stat"><b>14</b><span>tools in one app: jobs, quotes, maps, follow-ups and more</span></div>
+        <div class="stat"><b data-count="14">14</b><span>tools in one app, from jobs and quotes to maps and follow-ups</span></div>
+        <div class="stat"><b data-count="46">46</b><span>Connecticut towns scored to decide where to grow</span></div>
+        <div class="stat"><b data-count="17">17</b><span>services planned out, each with its kit and job steps</span></div>
       </div>
       <div class="shots">
         <figure class="shot wide">
           <a href="assets/img/mhs-sop.webp"><img src="assets/img/mhs-sop.webp" width="1600" height="521" alt="A job procedure in the app: a kit checklist (pressure washer, surfactant, hand tools, water supply) and seven numbered job steps, each with a spot for a photo." loading="lazy"></a>
-          <figcaption><b>Every service has a written procedure.</b> The kit to bring, then the job step by step, with a photo for each step.</figcaption>
+          <figcaption><b>Process management.</b> Every service has a written procedure: the kit to bring, then the job step by step, with a photo for each step.</figcaption>
         </figure>
         <figure class="shot">
           <a href="assets/img/mhs-decide.webp"><img src="assets/img/mhs-decide.webp" width="1600" height="1000" alt="A Connecticut town map colored by score next to a ranked list of towns with income and number of competitors." loading="lazy"></a>
@@ -79,16 +93,16 @@
         </figure>
         <figure class="shot">
           <a href="assets/img/mhs-console.webp"><img src="assets/img/mhs-console.webp" width="1600" height="825" alt="The app's home screen: a row of colored tiles for Business, Money, Lane Forecast, Competitors, Decision Intelligence, Route Map, Playbook, Situations, Files and Plant ID." loading="lazy"></a>
-          <figcaption><b>The home screen.</b> Every tool one tile away. Customer and money details are left out of these pictures.</figcaption>
+          <figcaption><b>Built to feel like an app.</b> Every tool one tap away, like the home screen on a phone. Customer and money details are left out of these pictures.</figcaption>
         </figure>
       </div>
     </section>
 
     <section class="project" id="focus" aria-labelledby="focus-h">
       <div class="project-head">
-        <div class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-database"/></svg>My data engine</div>
+        <div class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-database"/></svg>My personal ERP</div>
         <h2 id="focus-h">FOCUS</h2>
-        <p class="sub">One engine that keeps the numbers I care about, spots trends, forecasts what's coming and runs routine jobs on its own. Each app (money, places, business) is a view on the same data.</p>
+        <p class="sub">Enterprise resource planning, built for one person. Money, plans and requests live in one place, each with its status, and FOCUS forecasts what's coming so I can plan around it. Each app (money, places, business) is a view on the same data.</p>
       </div>
       <div class="flow" aria-label="How FOCUS works">
         <div class="flow-steps">
@@ -128,65 +142,137 @@
       <div class="project-head">
         <div class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-building"/></svg>Internships</div>
         <h2 id="intern-h">Two internships</h2>
-        <p class="sub">Company work stays with the company, so there are no screenshots here.</p>
+        <p class="sub">Data tracking and reporting, analytical tools, training and forecasting. Company work stays with the company, so instead of screenshots, here are mock-ups of the kind of tools I built. Hover the numbers for what each part does.</p>
       </div>
-      <div class="two">
-        <article class="job">
-          <div class="job-top"><h3>Leonardo DRS</h3><span class="when">Jun – Aug 2026</span></div>
+
+      <article class="intern" aria-labelledby="drs-h">
+        <div class="intern-head">
+          <div class="job-top"><h3 id="drs-h">Leonardo DRS</h3><span class="when">Jun – Aug 2026</span></div>
           <div class="role">Program management intern · Danbury, CT</div>
+          <p class="lede">Leonardo DRS is a defense technology company. In program management, the question was always the same: is this program on track? I pulled its five key numbers into one view and built price estimates from past jobs.</p>
           <ul>
             <li>Built a prototype dashboard bringing five focus areas into one view, plus top-level financial models that cut prep time</li>
-            <li>Helped build two pricing-estimate tools</li>
+            <li>Helped build two pricing-estimate tools from historical data</li>
             <li>Found inconsistent data in a data warehouse</li>
             <li>Used AI to turn repeat work into tools</li>
           </ul>
-        </article>
-        <article class="job">
-          <div class="job-top"><h3>Trumpf</h3><span class="when">Jan – May 2026</span></div>
+        </div>
+        <figure class="mock">
+          <div class="mock-win" role="img" aria-label="Mock-up of a program overview dashboard with made-up numbers: five key numbers, revenue against plan, and a price estimator.">
+            <div class="mock-bar"><i></i><i></i><i></i><span>Program overview</span><em class="mk">Mock-up · made-up numbers</em></div>
+            <div class="mock-body">
+              <div class="mk-kpis" style="--n:5">
+                <div class="mk-kpi"><small>Revenue to date</small><b>$4.2M</b><em class="warn">92% of plan</em></div>
+                <div class="mk-kpi"><small>Expected by year end</small><b>$6.8M</b><em>on plan</em></div>
+                <div class="mk-kpi"><small>Cash in · this week</small><b>$310K</b><em>next week $280K</em></div>
+                <div class="mk-kpi"><small>People on the program</small><b>24</b><em>2 open roles</em></div>
+                <div class="mk-kpi"><small>Booked</small><b>$9.6M</b><em class="up">+$1.1M this quarter</em></div>
+              </div>
+              <div class="mk-row">
+                <div class="mk-panel">
+                  <h4>Revenue: actual vs plan <span>this year</span></h4>
+                  <svg class="mk-chart" viewBox="0 0 300 110"><line class="gl" x1="18" x2="292" y1="92.0" y2="92.0"/><line class="gl" x1="18" x2="292" y1="69.2" y2="69.2"/><line class="gl" x1="18" x2="292" y1="46.4" y2="46.4"/><line class="gl" x1="18" x2="292" y1="23.7" y2="23.7"/><path class="area" d="M18.0,92 L18.0,86.9 L42.9,80.8 L67.8,74.9 L92.7,69.2 L117.6,63.0 L142.5,57.3 L167.5,51.0 L192.4,44.2 L192.4,92 Z"/><polyline class="plan" points="18.0,86.3 42.9,79.8 67.8,73.3 92.7,66.8 117.6,60.3 142.5,53.8 167.5,47.4 192.4,40.9 217.3,34.4 242.2,27.9 267.1,21.4 292.0,14.9"/><polyline class="act" points="18.0,86.9 42.9,80.8 67.8,74.9 92.7,69.2 117.6,63.0 142.5,57.3 167.5,51.0 192.4,44.2"/><text x="18.0" y="106" text-anchor="middle">J</text><text x="42.9" y="106" text-anchor="middle">F</text><text x="67.8" y="106" text-anchor="middle">M</text><text x="92.7" y="106" text-anchor="middle">A</text><text x="117.6" y="106" text-anchor="middle">M</text><text x="142.5" y="106" text-anchor="middle">J</text><text x="167.5" y="106" text-anchor="middle">J</text><text x="192.4" y="106" text-anchor="middle">A</text><text x="217.3" y="106" text-anchor="middle">S</text><text x="242.2" y="106" text-anchor="middle">O</text><text x="267.1" y="106" text-anchor="middle">N</text><text x="292.0" y="106" text-anchor="middle">D</text></svg>
+                  <div class="mk-legend"><span><i></i>Actual</span><span><i class="d"></i>Plan</span></div>
+                </div>
+                <div class="mk-panel">
+                  <h4>Price estimator <span>from past jobs</span></h4>
+                  <div class="mk-field"><span>Labor hours</span><b>1,200</b></div>
+                  <div class="mk-field"><span>Materials</span><b>$85K</b></div>
+                  <div class="mk-field"><span>Similar past jobs</span><b>14</b></div>
+                  <div class="mk-result"><small>Likely price</small><b>$412K – $448K</b><div class="mk-range"></div><small>Range from the 14 most similar past jobs</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="hs l" style="--x:19.6%;--y:15.5%" aria-hidden="true">1<span class="tip"><b>Five numbers, one view.</b> Revenue so far, revenue expected, cash coming in, people and work booked.</span></span>
+          <span class="hs dn" style="--x:58.6%;--y:15.5%" aria-hidden="true">2<span class="tip"><b>Cash this week and next,</b> so there are no surprises.</span></span>
+          <span class="hs dn" style="--x:50%;--y:70%" aria-hidden="true">3<span class="tip"><b>Actual vs plan,</b> month by month, so a program running behind shows up early.</span></span>
+          <span class="hs r" style="--x:97.6%;--y:48%" aria-hidden="true">4<span class="tip"><b>Price estimates from history:</b> enter the hours and materials, get a likely range from similar past jobs.</span></span>
+        </figure>
+        <ol class="mock-key">
+          <li><span class="n" aria-hidden="true">1</span><span><strong>Five numbers, one view.</strong> Revenue so far, revenue expected, cash coming in, people on the program and work booked. One screen instead of five reports.</span></li>
+          <li><span class="n" aria-hidden="true">2</span><span><strong>Cash this week and next,</strong> so there are no surprises.</span></li>
+          <li><span class="n" aria-hidden="true">3</span><span><strong>Actual vs plan,</strong> month by month, so a program running behind shows up early.</span></li>
+          <li><span class="n" aria-hidden="true">4</span><span><strong>Price estimates from history.</strong> Enter the hours and materials and get a likely range, based on similar past jobs.</span></li>
+        </ol>
+      </article>
+
+      <article class="intern" aria-labelledby="trumpf-h">
+        <div class="intern-head">
+          <div class="job-top"><h3 id="trumpf-h">Trumpf</h3><span class="when">Jan – May 2026</span></div>
           <div class="role">Digital intern · Farmington, CT</div>
+          <p class="lede">Trumpf makes industrial lasers and sheet-metal machines, and trains its customers to run them at its Farmington training center. I worked on the customer side: are companies using the training seats they bought, would pay-per-class customers be better off subscribing, and who's up for renewal?</p>
           <ul>
             <li>Built a data model behind about $300K in tracked funds</li>
             <li>Found and fixed inconsistent data moving between Excel, cloud systems and other software</li>
             <li>Built three Power BI reports for business decisions</li>
           </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="project" id="competitions" aria-labelledby="comp-h">
-      <div class="project-head">
-        <div class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-trophy"/></svg>Hackathons and projects</div>
-        <h2 id="comp-h">Competitions and team builds</h2>
-      </div>
-      <div class="tiles">
-        <div class="tile">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-bolt"/></svg></div>
-          <h3>YQuantum hackathon, Yale</h3>
-          <p>April 2026 · 24 hours, team of 4. We built an optimizer that keeps a simulated quantum bit stable while the hardware drifts.</p>
         </div>
-        <div class="tile">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chart"/></svg></div>
-          <h3>Travelers case competition</h3>
-          <p>April 2026 · Team of 4. We analyzed about 80,000 policyholder records and presented our findings to upper management.</p>
-        </div>
-        <div class="tile">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-list"/></svg></div>
-          <h3>Photo metadata pipeline</h3>
-          <p>CCSU, spring 2026 · Team of 3. A Python pipeline that reads images and turns them into organized, checked photo records.</p>
-        </div>
-        <div class="tile">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-people"/></svg></div>
-          <h3>Unitree GO2 robot project</h3>
-          <p>CCSU, spring 2025 · Project manager and communications lead. Helped recruit and run a team of 10+ students across 5 majors.</p>
-        </div>
-      </div>
+        <figure class="mock">
+          <div class="mock-win" role="img" aria-label="Mock-up of a customer training-subscription dashboard with made-up companies and numbers: seat use, pay-per-class versus subscription, renewals and follow-ups.">
+            <div class="mock-bar"><i></i><i></i><i></i><span>Customer training · subscriptions</span><em class="mk">Mock-up · made-up numbers</em></div>
+            <div class="mock-body">
+              <div class="mk-kpis">
+                <div class="mk-kpi"><small>Active subscriptions</small><b>38</b><em class="up">+4 this quarter</em></div>
+                <div class="mk-kpi"><small>Seats used</small><b>71%</b><em>of 412 seats bought</em></div>
+                <div class="mk-kpi"><small>Renewals, next 60 days</small><b>9</b><em class="warn">3 at risk</em></div>
+                <div class="mk-kpi"><small>Pay-per-class customers</small><b>112</b><em>17 should subscribe</em></div>
+              </div>
+              <div class="mk-row">
+                <div class="mk-panel">
+                  <h4>Seat use by customer <span>sorted by renewal</span></h4>
+                  <table class="mk-table">
+                    <thead><tr><th>Customer</th><th>Seats</th><th>Used</th><th>Renews</th></tr></thead>
+                    <tbody>
+                      <tr><td>Shop D</td><td>4</td><td><span class="mk-meter low"><i style="--p:25%"></i><span>25%</span></span></td><td>Dec 18</td></tr>
+                      <tr><td>Shop B</td><td>6</td><td><span class="mk-meter low"><i style="--p:33%"></i><span>33%</span></span></td><td>Jan 30</td></tr>
+                      <tr><td>Shop A</td><td>10</td><td><span class="mk-meter"><i style="--p:90%"></i><span>90%</span></span></td><td>Mar 14</td></tr>
+                      <tr><td>Shop E</td><td>8</td><td><span class="mk-meter"><i style="--p:75%"></i><span>75%</span></span></td><td>Apr 9</td></tr>
+                      <tr><td>Shop C</td><td>12</td><td><span class="mk-meter"><i style="--p:92%"></i><span>92%</span></span></td><td>Jun 2</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="mk-col">
+                  <div class="mk-panel">
+                    <h4>Should they subscribe? <span>spend vs a subscription</span></h4>
+                    <ul class="mk-list">
+                      <li><span>Shop F</span><span class="mk-flag">1.6× · offer it</span></li>
+                      <li><span>Shop G</span><span class="mk-flag">1.3× · offer it</span></li>
+                      <li><span>Shop H</span><span class="mk-flag ok">0.6× · not yet</span></li>
+                    </ul>
+                  </div>
+                  <div class="mk-panel">
+                    <h4>Follow up this week</h4>
+                    <ul class="mk-list">
+                      <li><span>Shop D · renews Dec 18</span><span class="mk-flag">call</span></li>
+                      <li><span>Shop B · low seat use</span><span class="mk-flag lv">offer onboarding</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="hs l" style="--x:25.4%;--y:14.5%" aria-hidden="true">1<span class="tip"><b>The program at a glance:</b> subscriptions, seat use, renewals coming up and pay-per-class customers.</span></span>
+          <span class="hs" style="--x:36%;--y:45%" aria-hidden="true">2<span class="tip"><b>Seat use by customer.</b> Low use means a company isn't getting value from what it bought.</span></span>
+          <span class="hs r" style="--x:97.6%;--y:43%" aria-hidden="true">3<span class="tip"><b>Pay-per-class vs subscription.</b> Spending more than a subscription costs? Time to offer one.</span></span>
+          <span class="hs r dn" style="--x:97.6%;--y:73.5%" aria-hidden="true">4<span class="tip"><b>Renewals and follow-ups,</b> so nothing lapses quietly.</span></span>
+        </figure>
+        <ol class="mock-key">
+          <li><span class="n" aria-hidden="true">1</span><span><strong>The program at a glance.</strong> Subscriptions, how many seats get used, renewals coming up and pay-per-class customers.</span></li>
+          <li><span class="n" aria-hidden="true">2</span><span><strong>Seat use by customer.</strong> Low use means a company isn't getting value from what it bought, so it's a follow-up before renewal.</span></li>
+          <li><span class="n" aria-hidden="true">3</span><span><strong>Pay-per-class vs subscription.</strong> When a company keeps paying class by class and spends more than a subscription costs, it's time to offer one.</span></li>
+          <li><span class="n" aria-hidden="true">4</span><span><strong>Renewals and follow-ups.</strong> Who expires soon and who to call, so nothing lapses quietly.</span></li>
+        </ol>
+      </article>
+      <div class="note"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg><span>These are mock-ups I drew for this page to show the kind of work. They're not the real tools, and there's no company data in them: every name and number is made up.</span></div>
     </section>
 
     <section class="cta" aria-labelledby="talk">
       <h2 id="talk">Have room for a part-time apprentice?</h2>
-      <p>I'd like to hear from you. Email is the fastest way to reach me.</p>
+      <p>I'd like to hear from you. Email or call, whichever's easier.</p>
       <div class="actions">
         <a class="btn primary" href="mailto:malachibcollins@gmail.com"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-mail"/></svg>malachibcollins@gmail.com</a>
+        <a class="btn" href="tel:+12033833089"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"/></svg>(203) 383-3089</a>
         <a class="btn" href="resume.html"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-file"/></svg>See my resume</a>
       </div>
     </section>
@@ -198,6 +284,7 @@
     <span>Malachi Collins · Hartford, CT</span>
     <nav aria-label="Contact">
       <a href="mailto:malachibcollins@gmail.com">Email</a>
+      <a href="tel:+12033833089">(203) 383-3089</a>
       <a href="https://www.linkedin.com/in/malachi-collins/" rel="noopener">LinkedIn</a>
       <a href="assets/Malachi-Collins-Resume.pdf">Resume (PDF)</a>
     </nav>
