@@ -60,8 +60,9 @@ Then open http://127.0.0.1:8791/portfolio/.
 
 ## What never goes on it
 
-- My home address, my personal money, and anything about customers (names, addresses, jobs, what they paid). My phone
-  number is on it by choice, since Nov 5, 2026.
+- My home address, my personal money, and anything about customers (names, addresses, what each one paid). By choice,
+  since Nov 5, 2026: my phone number, and Mally's billed total ($3,345 over 24 jobs, Jul 9 to Sep 2, 2026, from the
+  app's visits log).
 - Company work from internships: words and drawn mock-ups only, with made-up names and numbers and a label saying so.
   No screenshots, no real data.
 - Journal and Self content, and the personal areas of the research map (only work areas' session counts are shown).

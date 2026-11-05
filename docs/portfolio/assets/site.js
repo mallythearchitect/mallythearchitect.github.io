@@ -47,6 +47,7 @@
   function countUp(el) {
     const end = Number(el.dataset.count);
     const suffix = el.dataset.suffix || "";
+    const prefix = el.dataset.prefix || "";
     if (!Number.isFinite(end)) return;
     const final = el.textContent;
     const start = performance.now();
@@ -54,7 +55,7 @@
     const step = (now) => {
       const t = Math.min(1, (now - start) / dur);
       const eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = Math.round(end * eased).toLocaleString("en-US") + suffix;
+      el.textContent = prefix + Math.round(end * eased).toLocaleString("en-US") + suffix;
       if (t < 1) requestAnimationFrame(step);
       else el.textContent = final;
     };
