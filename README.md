@@ -23,7 +23,7 @@ Nothing goes live until a change is pushed, and a change is pushed only when I s
 | `docs/portfolio/assets/site.js` | Small touches of motion (fade-ins, count-ups, a pointer spotlight). Every page works without it |
 | `docs/portfolio/assets/icons.svg` | The line icons the pages use |
 | `docs/portfolio/assets/img/` | My headshot (`headshot.webp`, on Home), screenshots (`mhs-*` from Mally's, `focus-*` from the FOCUS demo), the phone icon and the link-preview card |
-| `docs/portfolio/assets/Malachi-Collins-Resume.pdf` | The resume, made from the Word file with the phone number and typos fixed |
+| `docs/portfolio/assets/Malachi-Collins-Resume.pdf` | The resume as I exported it from my Word file (Nov 5, 2026), phone number included |
 | `tools/shots.py` | Retakes the screenshots, hiding private details first and refusing to save one that still shows any |
 | `tools/resume_pdf.py` | Rebuilds the resume PDF from the Word file |
 | `tools/make_images.py` | Redraws the phone icon and the link-preview card |
@@ -100,6 +100,9 @@ python3 tools/shots.py --mhs-data <copy>/route-map/data
 ```
 
 ### Rebuild the resume PDF
+
+The live PDF is my own export from Word: export it again and replace the file. The tool below is the older way;
+it takes the phone number out and fixes a few typos.
 
 ```bash
 python3 tools/resume_pdf.py "$HOME/Desktop/Malachi Collins's Resume-2026.docx"
