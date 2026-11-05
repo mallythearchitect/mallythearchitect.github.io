@@ -1,9 +1,10 @@
 # Malachi Collins: portfolio
 
 The portfolio section of my website, for the contractors, union training directors and employers who open the link in
-my apprenticeship emails: **Home** (who I am, the C-6, E-2 and P-2 licenses I'm interested in, my technical skill set
-and why the trades), **Work** (the software behind Mally's Home Solutions, FOCUS as my personal ERP, and both internships
-shown with drawn mock-ups), **Projects** (research that turns into leads, tools and models, the power-grid AI and how I
+my apprenticeship emails: **Home** (my goal: apprentice hours toward a C-6, E-2 or P-2 license; my availability from
+Jan 1, 2027; what comes with me on top of learning the trade; my technical skill set and why the trades), **Work** (the
+software behind the home-services business I ran over summer 2026, FOCUS as my personal ERP, and both internships shown
+with drawn mock-ups), **Projects** (research that turns into leads, tools and models, the power-grid AI and how I
 work) and **Resume** (a work timeline you can hover and click, the details, skills and the PDF). It lives in its own folder, `docs/portfolio/`, so the
 bigger site can wrap around it later; until that site exists, the domain's front page forwards to it.
 

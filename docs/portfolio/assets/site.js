@@ -9,7 +9,7 @@
 
   if (!reduce && "IntersectionObserver" in window) {
     const SEL = [
-      ".band-head", ".bcard", ".pillar", ".lcol", ".apprentice-note", ".subhead",
+      ".band-head", ".bcard", ".pillar", ".lcol", ".subhead",
       ".card", ".ptile", ".tile", ".stat", ".job", ".shot", ".finder", ".bars",
       ".cta", ".section-head", ".project-head", ".flow", ".jump", ".chips", ".label-row",
     ].join(",");

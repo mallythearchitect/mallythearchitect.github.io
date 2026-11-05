@@ -315,7 +315,7 @@ figure { margin: 0; }
 @media (max-width: 859px) { .traces { width: 150%; right: -55%; top: -30px; opacity: 0.32; } }
 
 /* Hero: on phones the licenses sit right under "toward one of these licenses" */
-.hero { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; padding: 36px 0 72px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; padding: 36px 0 56px; }
 .hero > * { min-width: 0; }
 .hero-id { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .headshot { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; background: var(--wash); border: 3px solid var(--raised); box-shadow: 0 0 0 1px var(--ring), var(--shadow); }
@@ -323,15 +323,13 @@ figure { margin: 0; }
 .status i { width: 8px; height: 8px; border-radius: 50%; background: var(--good); flex: none; }
 .hero h1 { font-size: clamp(46px, 8.6vw, 88px); font-weight: 800; letter-spacing: -0.045em; line-height: 0.96; margin: 26px 0 18px; }
 .hero .lead { font-size: clamp(20px, 2.5vw, 25px); font-weight: 600; letter-spacing: -0.015em; line-height: 1.32; max-width: 26ch; margin-bottom: 26px; }
-.hero .sub { font-size: 17px; line-height: 1.6; max-width: 52ch; margin-top: 30px; }
 .meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 26px; }
 .meta span { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 999px; background: var(--wash); border: 1px solid var(--ring); color: var(--ink); font-size: 14.5px; font-weight: 550; }
 .meta .icon { color: var(--ink-2); }
 @media (min-width: 860px) {
-  .hero { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); column-gap: 64px; padding: 72px 0 112px; }
+  .hero { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); column-gap: 64px; padding: 72px 0 80px; }
   .hero > * { grid-column: 1; }
   .hero > .lic-stack { grid-column: 2; grid-row: 1 / span 6; align-self: center; margin: 0; }
-  .hero .sub { margin-top: 0; }
   .headshot { width: 104px; height: 104px; }
 }
 
@@ -436,14 +434,10 @@ figure { margin: 0; }
 .specs div { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--grid); font-size: 15px; }
 .specs dt { color: var(--ink-2); flex: none; }
 .specs dd { margin: 0; font-weight: 650; text-align: right; }
-.lcol .why { font-size: 16px; line-height: 1.55; }
-.lcol .why b { color: var(--k); }
 .path { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 13.5px; color: var(--ink-2); }
 .path span { padding: 4px 10px; border-radius: 999px; background: var(--wash); }
 .path span.on { background: var(--w); color: var(--k); font-weight: 700; }
 .path .icon { width: 14px; height: 14px; color: var(--muted); }
-.apprentice-note { margin-top: 14px; display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: 20px; background: var(--wash); border: 1px solid var(--ring); font-size: 16px; line-height: 1.55; }
-.apprentice-note .icon { color: var(--good); width: 22px; height: 22px; margin-top: 1px; }
 
 /* Cards: lift on hover */
 .card { position: relative; box-shadow: var(--shadow); transition: translate .5s var(--ease), box-shadow .5s var(--ease), border-color .3s; }
@@ -614,3 +608,28 @@ a.card:hover .pic img { transform: scale(1.03); }
 .job:target { border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent), var(--shadow-lg); }
 .tiles.skills { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
 .skill-list span { background: var(--wash); border: 1px solid var(--ring); }
+
+/* Availability: starts, hours, schedule. Easy to find on Home, the Resume and every call to action. */
+.avail { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--ring); border-radius: 18px; background: color-mix(in srgb, var(--raised) 88%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); box-shadow: var(--shadow); overflow: hidden; }
+.avail div { padding: 12px 16px; display: grid; gap: 3px; align-content: start; }
+.avail div + div { border-left: 1px solid var(--ring); }
+.avail dt { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+.avail dt .icon { color: var(--pl); width: 15px; height: 15px; }
+.avail dd { margin: 0; font-size: 16.5px; font-weight: 700; letter-spacing: -0.01em; }
+.hero .avail { margin-top: 26px; }
+.cta .avail { max-width: 620px; margin: 2px 0 4px; }
+.section-head + .avail, .actions + .avail { margin-top: 18px; max-width: 620px; }
+@media (min-width: 860px) { .hero .avail { margin-top: 0; } }
+@media (max-width: 480px) {
+  .avail { grid-template-columns: minmax(0, 1fr); }
+  .avail div { grid-template-columns: 112px minmax(0, 1fr); align-items: center; padding: 11px 14px; }
+  .avail div + div { border-left: 0; border-top: 1px solid var(--ring); }
+}
+
+/* What comes with me: what a shop gets on top of an apprentice, each with proof */
+.offers { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.offer { display: flex; flex-direction: column; gap: 10px; }
+.offer .proof { margin-top: auto; padding-top: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 14.5px; font-weight: 600; color: var(--link); text-decoration: none; }
+.offer .proof:hover { text-decoration: underline; }
+.offer .proof .icon { transition: transform .3s var(--ease); }
+.offer .proof:hover .icon { transform: translateX(3px); }
