@@ -6,10 +6,9 @@ and FOCUS in depth, internships, hackathons), **Projects** (all 21 projects, the
 AI sessions) and **Resume** (a timeline, the details and the PDF). It lives in its own folder, `docs/portfolio/`, so the
 bigger site can wrap around it later; until that site exists, the domain's front page forwards to it.
 
-**Live at:** https://mallythearchitect.github.io/portfolio/ (GitHub Pages, from the `docs/` folder of this repo's `main`
-branch). **Its home will be https://malachicollins.org/portfolio/** (the domain was registered at Squarespace on Nov 1,
-2026) once the DNS steps below are done; from then on the github.io address forwards to it, so links already sent keep
-working.
+**Live at:** https://malachicollins.org/portfolio/ (GitHub Pages, from the `docs/` folder of this repo's `main` branch;
+the domain was registered at Squarespace on Nov 1, 2026 and pointed here on Nov 5, 2026). The old address,
+https://mallythearchitect.github.io/portfolio/, forwards to it, so links already sent keep working.
 Nothing goes live until a change is pushed, and a change is pushed only when I say yes.
 
 ## What's here
