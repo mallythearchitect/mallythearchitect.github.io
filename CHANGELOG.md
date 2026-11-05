@@ -2,12 +2,19 @@
 
 Every saved change, newest first, in releases: one per day of work. Each release is a tag on GitHub (`vYYYY.MM.DD`, on the day's last change) and a GitHub release with the same list as its what-changed. A change that a later one took back out says so.
 
-Covers every saved change up to `4dac950` (5 Nov 2026): 11 saved changes in 3 releases, from 1 Nov 2026 to 5 Nov 2026. Rebuilt with `python3 scripts/changelog.py --log-only`; once it is saved, `--tags-only`, `git push --follow-tags` and `--releases` tag the day and publish it, so the change that saves this file is tagged too.
+Covers every saved change up to `ff61544` (5 Nov 2026): 13 saved changes in 4 releases, from 1 Nov 2026 to 5 Nov 2026. Rebuilt with `python3 scripts/changelog.py --log-only`; once it is saved, `--tags-only`, `git push --follow-tags` and `--releases` tag the day and publish it, so the change that saves this file is tagged too.
+
+## v2026.11.05.2 · Thursday 5 November 2026
+
+1 saved change
+
+- `ff61544` Portfolio v2: C-6, E-2 and P-2 up front, a skill set pitch, internship mock-ups and motion
 
 ## v2026.11.05 · Thursday 5 November 2026
 
-2 saved changes
+3 saved changes
 
+- `43c32d0` CHANGELOG.md: the day's changes
 - `4dac950` README: live at malachicollins.org, with the github.io address forwarding to it
 - `ba6b1ef` Home: my headshot above my name, round, cropped from the CCSU photo with its metadata stripped
 
