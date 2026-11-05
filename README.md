@@ -20,7 +20,7 @@ Nothing goes live until a change is pushed, and a change is pushed only when I s
 | `docs/portfolio/` | The portfolio section, self-contained: `index.html`, `work.html`, `projects.html`, `resume.html` |
 | `docs/portfolio/assets/site.css` | The one stylesheet: phone-first, light and dark follow the device |
 | `docs/portfolio/assets/icons.svg` | The line icons the pages use |
-| `docs/portfolio/assets/img/` | Screenshots (`mhs-*` from Mally's, `focus-*` from the FOCUS demo), the phone icon and the link-preview card |
+| `docs/portfolio/assets/img/` | My headshot (`headshot.webp`, on Home), screenshots (`mhs-*` from Mally's, `focus-*` from the FOCUS demo), the phone icon and the link-preview card |
 | `docs/portfolio/assets/Malachi-Collins-Resume.pdf` | The resume, made from the Word file with the phone number and typos fixed |
 | `tools/shots.py` | Retakes the screenshots, hiding private details first and refusing to save one that still shows any |
 | `tools/resume_pdf.py` | Rebuilds the resume PDF from the Word file |
