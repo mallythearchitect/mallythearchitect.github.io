@@ -2,18 +2,20 @@
 
 Every saved change, newest first, in releases: one per day of work. Each release is a tag on GitHub (`vYYYY.MM.DD`, on the day's last change) and a GitHub release with the same list as its what-changed. A change that a later one took back out says so.
 
-Covers every saved change up to `55ce20d` (5 Nov 2026): 15 saved changes in 4 releases, from 1 Nov 2026 to 5 Nov 2026. Rebuilt with `python3 scripts/changelog.py --log-only`; once it is saved, `--tags-only`, `git push --follow-tags` and `--releases` tag the day and publish it, so the change that saves this file is tagged too.
+Covers every saved change up to `08b2c9a` (5 Nov 2026): 17 saved changes in 4 releases, from 1 Nov 2026 to 5 Nov 2026. Rebuilt with `python3 scripts/changelog.py --log-only`; once it is saved, `--tags-only`, `git push --follow-tags` and `--releases` tag the day and publish it, so the change that saves this file is tagged too.
 
 ## v2026.11.05.2 · Thursday 5 November 2026
 
 1 saved change
 
-- `55ce20d` Mally's: $3,345 billed over 24 jobs in under two months, from the app's visits log
+- `08b2c9a` Home leads with the goal and availability; the business reads as a summer one
 
 ## v2026.11.05 · Thursday 5 November 2026
 
-5 saved changes
+7 saved changes
 
+- `fd84f34` CHANGELOG.md: the day's changes
+- `55ce20d` Mally's: $3,345 billed over 24 jobs in under two months, from the app's visits log
 - `cddfb3e` CHANGELOG.md: the day's changes
 - `ff61544` Portfolio v2: C-6, E-2 and P-2 up front, a skill set pitch, internship mock-ups and motion
 - `43c32d0` CHANGELOG.md: the day's changes
