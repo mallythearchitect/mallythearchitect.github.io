@@ -2,12 +2,14 @@
 
 Every saved change, newest first, in releases: one per day of work. Each release is a tag on GitHub (`vYYYY.MM.DD`, on the day's last change) and a GitHub release with the same list as its what-changed. A change that a later one took back out says so.
 
-Covers every saved change up to `bf3075c` (10 Nov 2026): 24 saved changes in 4 releases, from 1 Nov 2026 to 10 Nov 2026. Rebuilt with `python3 scripts/changelog.py --log-only`; once it is saved, `--tags-only`, `git push --follow-tags` and `--releases` tag the day and publish it, so the change that saves this file is tagged too.
+Covers every saved change up to `e8a9439` (10 Nov 2026): 26 saved changes in 4 releases, from 1 Nov 2026 to 10 Nov 2026. Rebuilt with `python3 scripts/changelog.py --log-only`; once it is saved, `--tags-only`, `git push --follow-tags` and `--releases` tag the day and publish it, so the change that saves this file is tagged too.
 
 ## v2026.11.10 · Tuesday 10 November 2026
 
-4 saved changes
+6 saved changes
 
+- `e8a9439` The Sports and Skills & career looks show what my engines publish
+- `7d014f8` CHANGELOG.md: the day's changes
 - `bf3075c` Sign in and Developer mode on the front page
 - `bc945e0` The welcome's doors: the arrow no longer sits on a two-line title on a phone
 - `4420902` CHANGELOG.md: the day's changes
