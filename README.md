@@ -1,6 +1,10 @@
-# Malachi Collins: portfolio
+# Malachi Collins: my website
 
-The portfolio section of my website, for the contractors, union training directors and employers who open the link in
+This repo is my public website, malachicollins.org. It has two parts: **the front page** (https://malachicollins.org/, see
+**The front page** below) and **the portfolio** (https://malachicollins.org/portfolio/), which came first and which the
+front page's trades look leads to.
+
+The portfolio is for the contractors, union training directors and employers who open the link in
 my apprenticeship emails: **Home** (my goal: apprentice hours toward a C-6, E-2 or P-2 license; my availability from
 Jan 1, 2027; what comes with me on top of learning the trade; my technical skill set and why the trades), **Work** (the
 software behind the home-services business I ran over summer 2026, FOCUS as my personal ERP, and both internships shown
@@ -10,10 +14,13 @@ work) and **Resume** (a work timeline you can hover and click, the details, skil
 Since Nov 10, 2026 the domain's front page is the site's own (see **The front page** below): a welcome with four looks
 (the trades, sports, skills and career, FOCUS) and one timeline to scroll. The trades look leads to this portfolio.
 
-**Live at:** https://malachicollins.org/portfolio/ (GitHub Pages, from the `docs/` folder of this repo's `main` branch;
-the domain was registered at Squarespace on Nov 1, 2026 and pointed here on Nov 5, 2026). The old address,
-https://mallythearchitect.github.io/portfolio/, forwards to it, so links already sent keep working.
+**Live at:** https://malachicollins.org/ and https://malachicollins.org/portfolio/ (GitHub Pages, from the `docs/` folder of
+this repo's `main` branch; the domain was registered at Squarespace on Nov 1, 2026 and pointed here on Nov 5, 2026). The old
+address, https://mallythearchitect.github.io/portfolio/, forwards to it, so links already sent keep working.
 Nothing goes live until a change is pushed, and a change is pushed only when I say yes.
+
+The portfolio will also answer at an address of its own, https://portfolio.malachicollins.org, once my server is up: it
+serves these same pages from this repo. That isn't live yet, and the addresses above keep working either way.
 
 ## What's here
 
@@ -61,7 +68,12 @@ python3 tools/front/build.py --out docs/index.html
 A picture for an entry: save it in `docs/assets/img/` and name it in that entry's `"image"`. Without one, the entry shows
 its icon. The same rules as below decide what goes on it; an entry goes in only on my yes.
 
-## Move it to malachicollins.org
+**Still to come:** my own pictures on more of the entries, what I publish from Sports (feats, stats and clips) and from
+Career (skill sets and projects) once my server is up, and a public version of FOCUS.
+
+## How malachicollins.org was pointed here
+
+The domain has pointed here since Nov 5, 2026 (steps 1 to 3). The steps are kept as the record of how it was done.
 
 1. **At Squarespace** (account.squarespace.com → Domains → malachicollins.org → DNS): delete the **Squarespace Defaults**
    preset, then add these custom records. Leave the `v=spf1 -all` text record.
@@ -89,7 +101,8 @@ its icon. The same rules as below decide what goes on it; an entry goes in only 
 python3 -m http.server 8791 --bind 127.0.0.1 --directory docs
 ```
 
-Then open http://127.0.0.1:8791/portfolio/.
+Then open http://127.0.0.1:8791/ (the front page) or http://127.0.0.1:8791/portfolio/. On this Mac the front page doesn't
+ask the hub or read the feeds; it does that only at its real https address.
 
 ## What never goes on it
 
@@ -148,6 +161,6 @@ GitHub Pages, ruled **Adopt · Watch** on Nov 1, 2026.
 - **Develop:** the portfolio is live before outreach starts and before the Nov 13–28 trip.
 - **Fine line:** the free plan publishes only from a public repo, so these files are public too (they're the site
   anyway). Pages is for personal and project sites, not for running a business.
-- **Exit:** plain files. Moving them to AWS (S3 or the Lightsail box) or any other host takes about an hour. A domain
-  of my own, malachicollins.org, points here once its DNS is set.
+- **Exit:** plain files. Moving them to any other host takes about an hour. My own domain, malachicollins.org, has
+  pointed here since Nov 5, 2026, so a move wouldn't change the address.
 - **Watch:** GitHub's Pages terms or pricing changing.
