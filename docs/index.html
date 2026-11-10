@@ -4,20 +4,279 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Malachi Collins</title>
-<!-- The site's front page comes later; for now the portfolio section is the site. -->
-<meta http-equiv="refresh" content="0; url=portfolio/">
-<link rel="canonical" href="https://malachicollins.org/portfolio/">
-<meta name="description" content="Malachi Collins: portfolio. Looking for part-time, registered apprentice hours toward a Connecticut C-6, E-2 or P-2 license.">
+<meta name="description" content="Malachi Collins: a look into the trades, sports, skills and career, and FOCUS, and one timeline from now back to 2021.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Malachi Collins · Portfolio">
-<meta property="og:description" content="Looking for part-time, registered apprentice hours toward a Connecticut C-6, E-2 or P-2 license.">
-<meta property="og:url" content="https://malachicollins.org/portfolio/">
-<meta property="og:image" content="https://malachicollins.org/portfolio/assets/img/og-card.png">
+<meta property="og:title" content="Malachi Collins">
+<meta property="og:description" content="A look into the trades, sports, skills and career, and FOCUS.">
+<meta property="og:url" content="https://malachicollins.org/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<style>body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;background:#f9f9f7;color:#0b0b0b;display:grid;place-items:center;min-height:100vh}a{color:#1c5cab}@media (prefers-color-scheme:dark){body{background:#0d0d0d;color:#f0efec}a{color:#86b6ef}}</style>
+
+<style>
+:root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--raised:#fff;--ink:#0b0b0b;--ink-2:#52514e;--muted:#6f6e69;
+--grid:#e1e0d9;--axis:#c3c2b7;--ring:rgba(11,11,11,.10);--wash:rgba(11,11,11,.045);--shadow:0 1px 2px rgba(11,11,11,.05),0 8px 28px rgba(11,11,11,.07);
+--s-trade:#eb6834;--s-sports:#e87ba4;--s-career:#2a78d6;--s-focus:#eda100;--radius:18px;
+--font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--raised:#1f1f1e;
+--ink:#f0efec;--ink-2:#c3c2b7;--muted:#a3a29b;--grid:#2c2c2a;--axis:#383835;--ring:rgba(255,255,255,.10);--wash:rgba(255,255,255,.055);
+--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.45);--s-trade:#d95926;--s-sports:#d55181;--s-career:#3987e5;--s-focus:#c98500}}
+:root[data-theme="dark"]{color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--raised:#1f1f1e;
+--ink:#f0efec;--ink-2:#c3c2b7;--muted:#a3a29b;--grid:#2c2c2a;--axis:#383835;--ring:rgba(255,255,255,.10);--wash:rgba(255,255,255,.055);
+--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.45);--s-trade:#d95926;--s-sports:#d55181;--s-career:#3987e5;--s-focus:#c98500}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:124px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--page);color:var(--ink);font:17px/1.55 var(--font);overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3,h4,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+[hidden]{display:none!important}
+.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:12px;z-index:50;background:var(--raised);padding:8px 12px;border-radius:8px}
+
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--page) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--ring)}
+.top .wrap{display:flex;align-items:center;gap:14px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:750;text-decoration:none;letter-spacing:-.01em}
+.mono{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--ink);color:var(--page);font-size:13px;font-weight:800;letter-spacing:.02em}
+.top nav{margin-left:auto;display:flex;gap:2px;align-items:center}
+.top nav a{font-size:15px;font-weight:600;text-decoration:none;padding:8px 10px;border-radius:10px;color:var(--ink-2)}
+.top nav a:hover{background:var(--wash);color:var(--ink)}
+@media (max-width:720px){.top nav a.hide-s{display:none}}
+.review{background:var(--ink);color:var(--page);font-size:14px;font-weight:600;text-align:center;padding:8px 16px}
+
+.hero{padding:40px 0 22px;display:grid;gap:22px;align-items:center}
+@media (min-width:860px){.hero{grid-template-columns:1fr 280px;padding:64px 0 30px;gap:48px}}
+.hero h1{font-size:clamp(44px,10.5vw,96px);line-height:.95;letter-spacing:-.045em;font-weight:820;margin:0 0 16px}
+.lead{font-size:clamp(19px,2.6vw,24px);line-height:1.35;color:var(--ink-2);max-width:34ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;color:var(--ink-2);font-size:15.5px}
+.meta span{display:inline-flex;gap:7px;align-items:center}
+.meta .icon{width:18px;height:18px;color:var(--muted)}
+.shot{width:min(280px,60vw);aspect-ratio:1;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);background:var(--wash)}
+.shot img{width:100%;height:100%;object-fit:cover}
+@media (max-width:859px){.shot{order:-1;width:124px;border-radius:22px}}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 16px;border-radius:12px;border:1px solid var(--ring);background:var(--raised);
+font:650 15.5px var(--font);color:var(--ink);text-decoration:none;cursor:pointer}
+.btn:hover{border-color:var(--axis)}
+.btn.primary{background:var(--ink);color:var(--page);border-color:var(--ink)}
+.btn .icon{width:18px;height:18px}
+
+/* the four looks */
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:6px 0 0}
+@media (min-width:900px){.doors{grid-template-columns:repeat(4,1fr);gap:14px}}
+.door{position:relative;display:grid;align-content:end;gap:2px;min-height:150px;padding:16px;border-radius:var(--radius);border:1px solid var(--ring);
+background:linear-gradient(160deg,color-mix(in srgb,var(--c) 26%,var(--surface)),color-mix(in srgb,var(--c) 7%,var(--surface)) 70%);
+text-decoration:none;overflow:hidden;transition:translate .15s,box-shadow .15s}
+@media (min-width:900px){.door{min-height:210px;padding:20px}}
+.door:hover{translate:0 -3px;box-shadow:var(--shadow)}
+.door .big{position:absolute;right:4px;top:4px;width:60px;height:60px;color:var(--c);opacity:.5;stroke-width:1.3}
+@media (min-width:900px){.door .big{width:140px;height:140px;right:-8px;top:-8px;stroke-width:1.2}}
+.door b{font-size:clamp(20px,3.4vw,26px);letter-spacing:-.025em;line-height:1.1;font-weight:800}
+.door span{font-size:14.5px;color:var(--ink-2);line-height:1.3}
+.door .go{position:absolute;left:16px;top:16px;width:22px;height:22px}
+.door[aria-current="true"]{box-shadow:0 0 0 2px var(--ink)}
+
+/* a look, opened */
+.panel{margin-top:22px;border-radius:24px;border:1px solid var(--ring);background:var(--surface);padding:22px 18px;display:grid;gap:18px;scroll-margin-top:76px;position:relative;overflow:hidden}
+.panel::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c)}
+@media (min-width:860px){.panel{padding:30px 34px;grid-template-columns:1fr 1fr;align-items:center;gap:30px}.panel.solo{grid-template-columns:1fr}}
+.kicker{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.kicker .icon{width:18px;height:18px;color:var(--c)}
+.panel h2{font-size:clamp(28px,5vw,42px);letter-spacing:-.035em;line-height:1.03;font-weight:800;margin:8px 0 10px}
+.panel p.line{font-size:17.5px;color:var(--ink-2);line-height:1.45;max-width:52ch}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.num{background:var(--page);border:1px solid var(--ring);border-radius:14px;padding:12px 12px 10px}
+.num b{display:block;font-size:clamp(20px,3.6vw,30px);letter-spacing:-.03em;line-height:1.05;font-weight:820}
+.num span{display:block;font-size:13.5px;font-weight:650;line-height:1.25;margin-top:5px}
+.num small{display:block;font-size:12.5px;color:var(--muted);line-height:1.25;margin-top:2px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tags span{font-size:13.5px;font-weight:600;padding:5px 10px;border-radius:999px;background:var(--wash)}
+.steps{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center;margin-top:14px;font-weight:700;font-size:15px}
+.steps i{font-style:normal;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--page);font-size:12px;margin-right:6px}
+.steps span{display:inline-flex;align-items:center;margin-right:10px}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.panel figure{border-radius:16px;overflow:hidden;border:1px solid var(--ring);box-shadow:var(--shadow)}
+.panel figcaption{font-size:12.5px;color:var(--muted);padding:8px 10px;background:var(--page)}
+
+/* the timeline */
+section.block{padding:46px 0 0}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:10px 24px;margin-bottom:12px}
+.head h2{font-size:clamp(28px,5vw,44px);letter-spacing:-.035em;line-height:1.02;font-weight:800}
+.head p{color:var(--ink-2);font-size:16.5px}
+.bar{position:sticky;top:60px;z-index:15;margin:0 -16px;padding:8px 16px;background:color-mix(in srgb,var(--page) 90%,transparent);backdrop-filter:blur(10px);
+display:flex;gap:6px;align-items:center;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--ring)}
+.bar::-webkit-scrollbar{display:none}
+.pill{flex:none;display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 12px;border-radius:999px;border:1px solid var(--ring);background:var(--raised);
+font:650 14px var(--font);color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap}
+.pill i{width:9px;height:9px;border-radius:3px;background:var(--c)}
+.pill[aria-current="true"],.pill[aria-pressed="true"]{background:var(--ink);color:var(--page);border-color:var(--ink)}
+.pill.yr{font-variant-numeric:tabular-nums;border-color:transparent;background:transparent;color:var(--ink-2);padding:0 9px}
+.pill.yr.on{background:var(--wash);color:var(--ink)}
+.bar .sep{flex:none;width:1px;height:22px;background:var(--grid);margin:0 4px}
+.pill .icon{width:16px;height:16px}
+.tl{position:relative;margin-top:8px;display:flex;flex-direction:column}
+.tl.rev,.tl.rev .items{flex-direction:column-reverse}
+.year{display:grid;grid-template-columns:1fr;scroll-margin-top:120px}
+.ylab{font-size:clamp(44px,9vw,72px);font-weight:820;letter-spacing:-.05em;line-height:1;color:var(--ink);opacity:.14;padding:26px 0 6px}
+@media (min-width:860px){.year{grid-template-columns:150px 1fr;gap:0 18px}.ylab{position:sticky;top:124px;align-self:start;padding:18px 0 0;font-size:54px;opacity:.2}}
+.items{display:flex;flex-direction:column;border-left:2px solid var(--grid);margin-left:7px;padding:6px 0 10px}
+.ev{position:relative;padding:8px 0 8px 22px}
+.ev::before{content:"";position:absolute;left:-8px;top:30px;width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px var(--page)}
+.ev.going::before{background:var(--page);border:3.5px solid var(--c)}
+.cont{padding:6px 0 6px 22px;font-size:14.5px;color:var(--muted)}
+.tcard{display:grid;background:var(--surface);border:1px solid var(--ring);border-radius:var(--radius);overflow:hidden;scroll-margin-top:130px}
+.tcard:target{box-shadow:0 0 0 2px var(--ink)}
+@media (min-width:700px){.tcard{grid-template-columns:230px 1fr}}
+.cover{position:relative;min-height:128px;background:linear-gradient(150deg,color-mix(in srgb,var(--c) 30%,var(--surface)),color-mix(in srgb,var(--c) 8%,var(--surface)));display:grid;place-items:center;overflow:hidden}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left}
+.cover .icon{width:54px;height:54px;color:var(--c);stroke-width:1.3;opacity:.9}
+.cover small{position:absolute;left:10px;bottom:8px;font-size:12px;font-weight:650;color:var(--ink-2);display:flex;gap:5px;align-items:center}
+.cover small .icon{width:14px;height:14px;opacity:1;color:currentColor;stroke-width:1.7}
+.tb{padding:16px 18px 15px}
+.when{font-size:13.5px;font-weight:650;color:var(--muted);font-variant-numeric:tabular-nums;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.now{font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--page);background:var(--ink);border-radius:6px;padding:2px 6px}
+.tcard h4{font-size:21px;line-height:1.15;letter-spacing:-.02em;font-weight:780;margin:5px 0 2px}
+.role{color:var(--ink-2);font-size:15.5px;font-weight:600}
+.fact{margin-top:9px;font-size:16.5px;line-height:1.35;font-weight:600}
+details{margin-top:6px}
+summary{cursor:pointer;font-size:14.5px;font-weight:650;color:var(--ink-2);width:max-content;padding:4px 0;list-style:none;display:flex;align-items:center;gap:6px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:700}
+details[open] summary::after{content:"–"}
+.pts{margin-top:4px;display:grid;gap:5px;font-size:15.5px;line-height:1.35}
+.pts li{padding-left:16px;position:relative}
+.pts li::before{content:"";position:absolute;left:2px;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--axis)}
+.foot{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:12px}
+.lz{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--ink-2)}
+.lz i{width:9px;height:9px;border-radius:3px;background:var(--c)}
+.more-link{font-size:14.5px;font-weight:700;display:inline-flex;gap:5px;align-items:center}
+.more-link .icon{width:16px;height:16px}
+.q{margin-top:12px;background:var(--wash);border-radius:10px;padding:9px 11px;font-size:14px;font-weight:600;line-height:1.35}
+.q b{display:inline-grid;place-items:center;min-width:24px;height:21px;padding:0 6px;border-radius:7px;background:var(--ink);color:var(--page);font-size:12.5px;font-weight:800;margin-right:6px}
+.wait .tcard{border-style:dashed}
+
+footer{padding:44px 0 48px;color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;justify-content:space-between;border-top:1px solid var(--ring);padding-top:22px}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+footer a{color:var(--ink-2)}
+
+/* the welcome */
+dialog#ask{border:0;padding:0;background:transparent;color:var(--ink);width:min(560px,100% - 20px);max-height:calc(100dvh - 20px);overflow:visible}
+dialog#ask::backdrop{background:rgba(8,8,8,.66);backdrop-filter:blur(5px)}
+.ask{background:var(--raised);border-radius:26px;box-shadow:var(--shadow);padding:22px 16px 16px;position:relative}
+@media (min-width:560px){.ask{padding:28px 24px 20px}}
+.ask .kicker{color:var(--muted)}
+.ask h2{font-size:clamp(26px,6.4vw,34px);letter-spacing:-.03em;line-height:1.05;font-weight:800;margin:6px 0 14px;padding-right:40px}
+.ask h2:focus{outline:none}
+.ask .close{position:absolute;right:12px;top:12px;width:40px;height:40px;border-radius:12px;border:0;background:var(--wash);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.ask .doors{padding:0;grid-template-columns:1fr 1fr;gap:9px}
+.ask .door{min-height:128px;padding:14px}
+.ask .door .big{width:54px;height:54px;right:4px;top:4px;stroke-width:1.3}
+.ask .door b{font-size:19px}
+.ask .door span{font-size:13.5px}
+.stay{margin-top:10px;width:100%;display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:14px;border:1.5px dashed var(--axis);
+background:transparent;color:var(--ink);font:650 15.5px var(--font);cursor:pointer}
+.stay .icon{width:18px;height:18px}
+</style>
 </head>
 <body>
-<p>Opening the <a href="portfolio/">portfolio</a>…</p>
-<script>location.replace("portfolio/" + location.hash);</script>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="#main"><span class="mono">MC</span><span>Malachi Collins</span></a>
+<nav aria-label="Main"><a class="hide-s" href="#trade" data-lens-link="trade">The trades</a><a class="hide-s" href="#sports" data-lens-link="sports">Sports</a><a class="hide-s" href="#career" data-lens-link="career">Skills &amp; career</a><a class="hide-s" href="#focus" data-lens-link="focus">FOCUS</a><a href="#timeline" data-lens-link="all">Timeline</a></nav>
+</div></header>
+
+<main id="main">
+<div class="wrap">
+<section class="hero">
+<div>
+<h1>Malachi Collins</h1>
+<p class="lead">Take a look into the trades, sports, my skills and career, or FOCUS. Or scroll the timeline.</p>
+<div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.7-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.3-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>Hartford, CT</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9 12 4.5 21.5 9 12 13.5z"/><path d="M6.5 11v4.5c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3V11M21.5 9v5"/></svg>CCSU, class of 2027</span></div>
+</div>
+<div class="shot"><img src="assets/img/headshot.webp" width="480" height="480" alt="Malachi Collins"></div>
+</section>
+<nav class="doors" aria-label="Take a look into"><a class="door" style="--c:var(--s-trade)" href="#trade" data-lens-link="trade"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5.2 5.2L11 20.4a2 2 0 0 1-2.8 0l-.6-.6a2 2 0 0 1 0-2.8l8.7-8.7a4 4 0 0 0-5.2-5.2l2.6 2.6z"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>The trades</b><span>My path into a trade</span></a><a class="door" style="--c:var(--s-sports)" href="#sports" data-lens-link="sports"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5.5a4 4 0 0 1-8 0z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.6 4M16 6h2.5a2.5 2.5 0 0 1-2.6 4M12 13.5V17M8.5 20h7M9.5 17h5v3h-5z"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>Sports</b><span>Feats, tricks and progress</span></a><a class="door" style="--c:var(--s-career)" href="#career" data-lens-link="career"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>Skills &amp; career</b><span>Skill sets, projects, experience</span></a><a class="door" style="--c:var(--s-focus)" href="#focus" data-lens-link="focus"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/><path d="M12 1.5v4M12 18.5v4M1.5 12h4M18.5 12h4"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>FOCUS</b><span>The analytics tools I build</span></a></nav>
+<section class="panel solo" id="trade" style="--c:var(--s-trade)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5.2 5.2L11 20.4a2 2 0 0 1-2.8 0l-.6-.6a2 2 0 0 1 0-2.8l8.7-8.7a4 4 0 0 0-5.2-5.2l2.6 2.6z"/></svg>A look into</div><h2>The trades</h2><p class="line">A trade to go with the software. I&#x27;m looking for part-time apprentice hours toward a Connecticut C-6, E-2 or P-2 license.</p><div class="nums"><div class="num"><b>24</b><span>paid jobs</span><small>my own business, summer 2026</small></div><div class="num"><b>$3,345</b><span>billed</span><small>in under 2 months</small></div><div class="num"><b>Jan 1, 2027</b><span>ready to start</span><small>15–20 hours a week</small></div></div><div class="acts"><a class="btn primary" href="portfolio/">Open the trades portfolio<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="panel solo" id="sports" style="--c:var(--s-sports)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5.5a4 4 0 0 1-8 0z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.6 4M16 6h2.5a2.5 2.5 0 0 1-2.6 4M12 13.5V17M8.5 20h7M9.5 17h5v3h-5z"/></svg>A look into</div><h2>Sports</h2><p class="line">Documenting the progress: the feats, the tricks, and the numbers behind them.</p></div></section><section class="panel solo" id="career" style="--c:var(--s-career)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg>A look into</div><h2>Skills &amp; career</h2><p class="line">What I can do and where I&#x27;ve done it: data, reporting, tools and the people side.</p><div class="nums"><div class="num"><b>7</b><span>jobs and internships</span><small>since 2021</small></div><div class="num"><b>2</b><span>certifications</span><small>AWS Cloud Practitioner, Security+</small></div><div class="num"><b>200K+</b><span>views on posts I made</span><small>39 posts, 2 platforms</small></div></div><div class="tags"><span>Python</span><span>SQL</span><span>Power BI</span><span>Excel</span><span>AWS</span><span>Dashboards</span><span>Forecasting</span><span>HTML, CSS &amp; JavaScript</span><span>Git &amp; GitHub</span><span>Project leadership</span><span>Sales</span><span>Marketing</span></div><div class="acts"><a class="btn primary" href="portfolio/assets/Malachi-Collins-Resume.pdf"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9.5 14.5 12 17l2.5-2.5"/></svg>Resume (PDF)</a><a class="btn" href="https://www.linkedin.com/in/malachi-collins/" rel=noopener><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.25v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></svg>LinkedIn</a></div></div></section><section class="panel" id="focus" style="--c:var(--s-focus)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/><path d="M12 1.5v4M12 18.5v4M1.5 12h4M18.5 12h4"/></svg>A look into</div><h2>FOCUS</h2><p class="line">FOCUS is the analytics engine I built for myself. It tracks, analyzes, predicts, and runs jobs on its own.</p><div class="nums"><div class="num"><b>330</b><span>automated tests</span><small>run before every saved change</small></div><div class="num"><b>34</b><span>design decisions</span><small>written down, each with its reason</small></div><div class="num"><b>170+</b><span>saved changes</span><small>since Sep 27, 2026</small></div></div><div class="steps"><span><i>1</i>Track</span><span><i>2</i>Analyze</span><span><i>3</i>Predict</span><span><i>4</i>Run on its own</span></div></div><figure><img src="assets/img/focus-home.webp" alt="The FOCUS home screen: a search box and a row of app tiles. Demo data: every name and number is made up." loading="lazy" width="1600" height="1000"><figcaption>Demo data: every name and number in this picture is made up.</figcaption></figure></section>
+
+<section class="block" id="timeline">
+<div class="head"><div><h2>The timeline</h2><p>Scroll it: now, back to 2021.</p></div></div>
+<div class="bar"><a class="pill yr" href="#y2026">2026</a><a class="pill yr" href="#y2025">2025</a><a class="pill yr" href="#y2024">2024</a><a class="pill yr" href="#y2023">2023</a><a class="pill yr" href="#y2022">2022</a><a class="pill yr" href="#y2021">2021</a><span class="sep"></span><a class="pill" href="#timeline" data-lens-link="all" aria-current="true">All</a><a class="pill" href="#trade" data-lens-link="trade" style="--c:var(--s-trade)"><i></i>The trades</a><a class="pill" href="#sports" data-lens-link="sports" style="--c:var(--s-sports)"><i></i>Sports</a><a class="pill" href="#career" data-lens-link="career" style="--c:var(--s-career)"><i></i>Skills &amp; career</a><a class="pill" href="#focus" data-lens-link="focus" style="--c:var(--s-focus)"><i></i>FOCUS</a><span class="sep"></span>
+<button class="pill" id="flip" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16M7 20l-3.5-3.5M7 20l3.5-3.5M17 20V4M17 4l-3.500 3.500M17 4l3.500 3.500"/></svg>Newest first</button></div>
+<div class="tl"><section class="year" id="y2026"><div class="ylab" aria-hidden="true">2026</div><ol class="items" aria-label="2026"><li class="ev going" data-lens="trade" style="--c:var(--s-trade)"><article class="tcard" id="e-doors"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2.5 4.5 13.5h6.5l-1 8 8.5-11h-6.5z"/></svg></div><div class="tb"><div class="when">Nov 2026 – now · Hartford and Fairfield counties<span class=now>Now</span></div><h4>Trades apprenticeship search</h4><p class="role">Electrical, plumbing or low voltage</p><p class="fact">Looking for part-time apprentice hours from January 1, 2027</p><details><summary>More</summary><ul class="pts"><li>Toward a Connecticut C-6, E-2 or P-2 license</li><li>Mapped 495 licensed shops in two counties to find the right one</li></ul></details><div class="foot"><span class="lz"><i></i>The trades</span><a class="more-link" href="portfolio/">See the trades portfolio<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></article></li><li class="ev" data-lens="focus" style="--c:var(--s-focus)"><article class="tcard" id="e-engines"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg></div><div class="tb"><div class="when">Nov 2026</div><h4>Four engines</h4><p class="role">One private workspace per focus</p><p class="fact">Built the Career and Sports engines in a weekend</p><details><summary>More</summary><ul class="pts"><li>Each one keeps its own data and links to the others</li></ul></details><div class="foot"><span class="lz"><i></i>FOCUS</span></div></div></article></li><li class="ev going" data-lens="career" style="--c:var(--s-career)"><article class="tcard" id="e-homedepot"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5.2 5.2L11 20.4a2 2 0 0 1-2.8 0l-.6-.6a2 2 0 0 1 0-2.8l8.7-8.7a4 4 0 0 0-5.2-5.2l2.6 2.6z"/></svg></div><div class="tb"><div class="when">Sep 2026 – now · Manchester, CT<span class=now>Now</span></div><h4>The Home Depot</h4><p class="role">Pro sales associate, part-time</p><div class="foot"><span class="lz"><i></i>Skills &amp; career</span></div></div></article></li><li class="ev going" data-lens="focus" style="--c:var(--s-focus)"><article class="tcard" id="e-focus"><div class="cover"><img src="assets/img/focus-money.webp" alt="A day-by-day line chart of money through January, with the forecasted months marked. Demo data." loading="lazy"></div><div class="tb"><div class="when">Sep 2026 – now<span class=now>Now</span></div><h4>FOCUS</h4><p class="role">My own analytics engine</p><p class="fact">Tracks, analyzes, predicts, and runs jobs on its own</p><details><summary>More</summary><ul class="pts"><li>330 automated tests and 34 written design decisions</li><li>170+ saved changes since Sep 27, 2026</li></ul></details><div class="foot"><span class="lz"><i></i>FOCUS</span></div></div></article></li><li class="ev going" data-lens="career" style="--c:var(--s-career)"><article class="tcard" id="e-lead"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg></div><div class="tb"><div class="when">Aug 2026 – now · East Hartford, CT<span class=now>Now</span></div><h4>LEAD</h4><p class="role">Coordinator assistant (contract, via 50CAN)</p><p class="fact">Built a map-based data tool for outreach across Hartford County</p><details><summary>More</summary><ul class="pts"><li>Tracks a canvassing team toward 500 signatures</li><li>Writes the post-event reports</li></ul></details><div class="foot"><span class="lz"><i></i>Skills &amp; career</span></div></div></article></li><li class="ev" data-lens="trade" style="--c:var(--s-trade)"><article class="tcard" id="e-mhs"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v10h-11zM13.5 10h4l3.5 3.5v3h-7.5"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div><div class="tb"><div class="when">Jul – Sep 2026 · Fairfield County, CT</div><h4>Mally&#x27;s Home Solutions</h4><p class="role">My home-services business</p><p class="fact">24 paid jobs in under 2 months, $3,345 billed</p><details><summary>More</summary><ul class="pts"><li>19 trash-bin cleanings, plus windows, gutters, a soft wash, junk removal and a $1,650 whole-house clean</li><li>20 of the 24 jobs came from knocking on doors</li><li>Part-time, alongside a full-time job and school</li></ul></details><div class="foot"><span class="lz"><i></i>The trades</span></div></div></article></li><li class="ev" data-lens="focus" style="--c:var(--s-focus)"><article class="tcard" id="e-mhsapp"><div class="cover"><img src="assets/img/mhs-console.webp" alt="The app&#x27;s home screen: a row of colored tiles, one per tool." loading="lazy"></div><div class="tb"><div class="when">Jul – Oct 2026</div><h4>The Mally&#x27;s app</h4><p class="role">Software for a home-services business</p><p class="fact">14 tools in one app: routes, maps, customers, follow-ups</p><details><summary>More</summary><ul class="pts"><li>Scored 46 Connecticut towns to decide where to grow</li></ul></details><div class="foot"><span class="lz"><i></i>FOCUS</span></div></div></article></li><li class="ev" data-lens="career" style="--c:var(--s-career)"><article class="tcard" id="e-drs"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16h16"/><path d="m7.5 14.5 3.5-4 3 2.5 5-6"/></svg></div><div class="tb"><div class="when">Jun – Aug 2026 · Danbury, CT</div><h4>Leonardo DRS</h4><p class="role">Program management intern</p><p class="fact">One dashboard for five focus areas</p><details><summary>More</summary><ul class="pts"><li>Helped build 2 pricing estimators</li><li>Financial models that cut prep time</li></ul></details><div class="foot"><span class="lz"><i></i>Skills &amp; career</span></div></div></article></li><li class="ev" data-lens="focus" style="--c:var(--s-focus)"><article class="tcard" id="e-grid"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3.5v4M15 3.5v4M6.5 7.5h11v3a5.5 5.5 0 0 1-11 0z"/><path d="M12 16v4.5"/></svg></div><div class="tb"><div class="when">Apr 2026</div><h4>Power-grid AI</h4><p class="role">Hackathon build</p><p class="fact">Simulated Washington DC&#x27;s grid: 58 substations on a 345 kV loop</p><details><summary>More</summary><ul class="pts"><li>An AI decides how the grid responds when data centers spike</li></ul></details><div class="foot"><span class="lz"><i></i>FOCUS</span></div></div></article></li><li class="ev" data-lens="focus" style="--c:var(--s-focus)"><article class="tcard" id="e-travelers"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 17.5 9 12l4 4 7.5-8"/><path d="M15 8h5.5v5.5"/></svg></div><div class="tb"><div class="when">Apr 2026</div><h4>Travelers business case competition</h4><p class="role">Team of 4</p><p class="fact">Analyzed about 80,000 insurance policy records</p><details><summary>More</summary><ul class="pts"><li>Presented the findings to upper management</li></ul></details><div class="foot"><span class="lz"><i></i>FOCUS</span></div></div></article></li><li class="ev" data-lens="focus" style="--c:var(--s-focus)"><article class="tcard" id="e-yale"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 12a7.5 7.5 0 0 1-13 5.1M4.5 12a7.5 7.5 0 0 1 13-5.1"/><path d="M17.8 3.5v3.6h-3.6M6.2 20.5v-3.6h3.6"/></svg></div><div class="tb"><div class="when">Apr 2026 · New Haven, CT</div><h4>Quantum Tech Hackathon, Yale</h4><p class="role">Team of 4, 24 hours</p><p class="fact">Kept a simulated quantum bit stable</p><details><summary>More</summary><ul class="pts"><li>Measured on drift and error rates</li></ul></details><div class="foot"><span class="lz"><i></i>FOCUS</span></div></div></article></li><li class="ev" data-lens="focus" style="--c:var(--s-focus)"><article class="tcard" id="e-photo"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5 15 5l1.2 5.5L4.2 13z"/><path d="m16.2 8.5 3.3-.8.8 3.6-3.4.8M7.5 12.5 8 16h-3.5M4.5 16v3"/></svg></div><div class="tb"><div class="when">Feb – May 2026 · New Britain, CT</div><h4>Photo metadata pipeline</h4><p class="role">CCSU project, team of 3</p><p class="fact">A Python tool that turns images into organized, checked records</p><div class="foot"><span class="lz"><i></i>FOCUS</span></div></div></article></li><li class="ev" data-lens="career" style="--c:var(--s-career)"><article class="tcard" id="e-trumpf"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></div><div class="tb"><div class="when">Jan – May 2026 · Farmington, CT</div><h4>Trumpf</h4><p class="role">Digital intern</p><p class="fact">Built the data model behind about $300K in tracked funds</p><details><summary>More</summary><ul class="pts"><li>3 Power BI reports for business decisions</li><li>Fixed data breaking between Excel and cloud systems</li></ul></details><div class="foot"><span class="lz"><i></i>Skills &amp; career</span></div></div></article></li></ol></section><section class="year" id="y2025"><div class="ylab" aria-hidden="true">2025</div><ol class="items" aria-label="2025"><li class="ev" data-lens="sports" style="--c:var(--s-sports)"><article class="tcard" id="e-ayp"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5 15 5l1.2 5.5L4.2 13z"/><path d="m16.2 8.5 3.3-.8.8 3.6-3.4.8M7.5 12.5 8 16h-3.5M4.5 16v3"/></svg></div><div class="tb"><div class="when">Dec 2025 – Jun 2026 · Connecticut</div><h4>A Young Pioneer</h4><p class="role">Adventure sports, on camera</p><p class="fact">Clips of the feats, the tricks and the progress</p><div class="foot"><span class="lz"><i></i>Sports</span></div></div></article></li><li class="ev" data-lens="career" style="--c:var(--s-career)"><article class="tcard" id="e-sald"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3.5c.6 3.9 2.6 5.9 6.5 6.5-3.9.6-5.9 2.6-6.5 6.5-.6-3.9-2.6-5.9-6.5-6.5 3.9-.6 5.9-2.6 6.5-6.5z"/><path d="M18.5 14.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></div><div class="tb"><div class="when">Aug 2025 – May 2026 · New Britain, CT</div><h4>Student Activities, CCSU</h4><p class="role">Marketing coordinator</p><p class="fact">200,000+ views from 39 posts on 2 platforms</p><details><summary>More</summary><ul class="pts"><li>Started a 4-person ambassador program</li><li>Helped host 30 weekly night events</li></ul></details><div class="foot"><span class="lz"><i></i>Skills &amp; career</span></div></div></article></li><li class="ev" data-lens="focus" style="--c:var(--s-focus)"><article class="tcard" id="e-robot"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3.5V7M14 3.5V7M10 17v3.5M14 17v3.5M3.5 10H7M3.5 14H7M17 10h3.5M17 14h3.5"/></svg></div><div class="tb"><div class="when">Mar – May 2025 · New Britain, CT</div><h4>Unitree GO2 robot project</h4><p class="role">Project manager, CCSU</p><p class="fact">Led 10+ students from 5 majors</p><details><summary>More</summary><ul class="pts"><li>Robot simulation in Isaac Sim, object detection with YOLO-NAS</li></ul></details><div class="foot"><span class="lz"><i></i>FOCUS</span></div></div></article></li></ol></section><section class="year" id="y2024"><div class="ylab" aria-hidden="true">2024</div><ol class="items" aria-label="2024"><li class="ev going" data-lens="career" style="--c:var(--s-career)"><article class="tcard" id="e-sga"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8.5" r="3.2"/><path d="M3 19.5c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9.5" r="2.5"/><path d="M16.5 14.6c2.3.2 4 1.8 4.5 4.4"/></svg></div><div class="tb"><div class="when">Aug 2024 – now · New Britain, CT<span class=now>Now</span></div><h4>Student Government Association, CCSU</h4><p class="role">Social chair → vice president</p><p class="fact">Helped recruit and keep 50 members</p><details><summary>More</summary><ul class="pts"><li>Events drew 20 to 200+ people</li><li>Brought back a statewide student-government event with four schools</li></ul></details><div class="foot"><span class="lz"><i></i>Skills &amp; career</span></div></div></article></li><li class="ev" data-lens="career" style="--c:var(--s-career)"><article class="tcard" id="e-swim"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5s-6 6.6-6 11a6 6 0 0 0 12 0c0-4.4-6-11-6-11z"/><path d="M9.2 15.2A2.9 2.9 0 0 0 12 18"/></svg></div><div class="tb"><div class="when">Feb 2024 – Dec 2026 · Newington, CT</div><h4>SafeSplash + SwimLabs</h4><p class="role">Swim instructor → deck supervisor → lead instructor</p><p class="fact">Promoted twice</p><details><summary>More</summary><ul class="pts"><li>Teach all ages, beginner to advanced</li><li>Called hundreds of leads to grow enrollment</li></ul></details><div class="foot"><span class="lz"><i></i>Skills &amp; career</span></div></div></article></li></ol></section><section class="year" id="y2023"><div class="ylab" aria-hidden="true">2023</div><ol class="items" aria-label="2023"><li class="cont">Still going: Central Connecticut State University, Campus Recreation, CCSU</li></ol></section><section class="year" id="y2022"><div class="ylab" aria-hidden="true">2022</div><ol class="items" aria-label="2022"><li class="cont">Still going: Central Connecticut State University, Campus Recreation, CCSU</li></ol></section><section class="year" id="y2021"><div class="ylab" aria-hidden="true">2021</div><ol class="items" aria-label="2021"><li class="ev" data-lens="career" style="--c:var(--s-career)"><article class="tcard" id="e-ccsu"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9 12 4.5 21.5 9 12 13.5z"/><path d="M6.5 11v4.5c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3V11M21.5 9v5"/></svg></div><div class="tb"><div class="when">Aug 2021 – May 2027 · New Britain, CT</div><h4>Central Connecticut State University</h4><p class="role">BS, Information Systems &amp; Management</p><p class="fact">Minors in cybersecurity and artificial intelligence</p><div class="foot"><span class="lz"><i></i>Skills &amp; career</span></div></div></article></li><li class="ev" data-lens="career" style="--c:var(--s-career)"><article class="tcard" id="e-rec"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5.5a4 4 0 0 1-8 0z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.6 4M16 6h2.5a2.5 2.5 0 0 1-2.6 4M12 13.5V17M8.5 20h7M9.5 17h5v3h-5z"/></svg></div><div class="tb"><div class="when">Jan 2021 – Aug 2025 · New Britain, CT</div><h4>Campus Recreation, CCSU</h4><p class="role">ClubSports staff</p><p class="fact">Ran 50+ practices and games across 10+ sports</p><details><summary>More</summary><ul class="pts"><li>Tracked inventory and field conditions</li></ul></details><div class="foot"><span class="lz"><i></i>Skills &amp; career</span></div></div></article></li></ol></section><section class="year" id="yalso"><div class="ylab" aria-hidden="true">Also</div><ol class="items" aria-label="Also"><li class="ev" data-lens="career" style="--c:var(--s-career)"><article class="tcard" id="e-certs"><div class="cover"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.6-3.2 8-7 9.5-3.8-1.5-7-4.9-7-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></div><div class="tb"><h4>AWS Cloud Practitioner · CompTIA Security+</h4><p class="role">Certifications</p><p class="fact">Cloud systems, and how they&#x27;re kept secure</p><div class="foot"><span class="lz"><i></i>Skills &amp; career</span></div></div></article></li></ol></section></div>
+</section>
+</div>
+</main>
+<footer><div class="wrap"><span>Malachi Collins · Hartford, CT</span>
+<nav aria-label="Links"><a href="portfolio/">Trades portfolio</a><a href="https://www.linkedin.com/in/malachi-collins/" rel="noopener">LinkedIn</a><a href="mailto:malachibcollins@gmail.com">Email</a><a href="#" data-ask>Welcome</a></nav>
+</div></footer>
+<dialog id="ask" aria-labelledby="ask-h"><div class="ask">
+<form method="dialog"><button class="close" aria-label="Close"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></form>
+<div class="kicker">Welcome</div><h2 id="ask-h" tabindex="-1" autofocus>Take a look into</h2>
+<div class="doors"><a class="door" style="--c:var(--s-trade)" href="portfolio/"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5.2 5.2L11 20.4a2 2 0 0 1-2.8 0l-.6-.6a2 2 0 0 1 0-2.8l8.7-8.7a4 4 0 0 0-5.2-5.2l2.6 2.6z"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>The trades</b><span>My path into a trade</span></a><a class="door" style="--c:var(--s-sports)" href="#sports" data-lens-link="sports"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5.5a4 4 0 0 1-8 0z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.6 4M16 6h2.5a2.5 2.5 0 0 1-2.6 4M12 13.5V17M8.5 20h7M9.5 17h5v3h-5z"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>Sports</b><span>Feats, tricks and progress</span></a><a class="door" style="--c:var(--s-career)" href="#career" data-lens-link="career"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>Skills &amp; career</b><span>Skill sets, projects, experience</span></a><a class="door" style="--c:var(--s-focus)" href="#focus" data-lens-link="focus"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/><path d="M12 1.5v4M12 18.5v4M1.5 12h4M18.5 12h4"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>FOCUS</b><span>The analytics tools I build</span></a></div>
+<form method="dialog"><button class="stay"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg>Just looking around</button></form>
+</div></dialog>
+<script>
+(() => {
+  const LENSES = ['trade', 'sports', 'career', 'focus'];
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const dlg = $('#ask');
+  const seen = () => { try { return sessionStorage.getItem('mc.asked'); } catch (e) { return null; } };
+  const mark = () => { try { sessionStorage.setItem('mc.asked', '1'); } catch (e) {} };
+
+  // one look at a time: its panel opens and the timeline shows only its entries
+  const setLens = (lens, scroll) => {
+    if (!LENSES.includes(lens)) lens = 'all';
+    $$('.panel').forEach((p) => { p.hidden = p.id !== lens; });
+    $$('.ev').forEach((e) => { e.hidden = lens !== 'all' && e.dataset.lens !== lens; });
+    $$('.year').forEach((y) => {
+      const any = $$('.ev', y).some((e) => !e.hidden);
+      y.hidden = !any && lens !== 'all';
+      const c = $('.cont', y); if (c) c.hidden = lens !== 'all';
+    });
+    $$('.pill.yr').forEach((a) => { const y = document.getElementById(a.getAttribute('href').slice(1)); a.hidden = !y || y.hidden; });
+    $$('[data-lens-link]').forEach((a) => a.setAttribute('aria-current', String(a.dataset.lensLink === lens)));
+    if (scroll) (lens === 'all' ? $('#timeline') : document.getElementById(lens)).scrollIntoView({ block: 'start' });
+  };
+  const fromHash = () => location.hash.slice(1);
+  $$('[data-lens-link]').forEach((a) => a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const lens = a.dataset.lensLink;
+    if (dlg && dlg.open) dlg.close();
+    history.pushState(null, '', lens === 'all' ? '#timeline' : '#' + lens);
+    setLens(lens, true);
+  }));
+  window.addEventListener('popstate', () => setLens(fromHash(), LENSES.includes(fromHash())));
+  setLens(fromHash(), LENSES.includes(fromHash()));
+
+  // the welcome: on arrival, once per visit; a link to a part of the page (#...) or ?stay skips it
+  if (dlg && dlg.showModal) {
+    if (!seen() && !location.hash && !/[?&]stay\b/.test(location.search)) dlg.showModal();
+    dlg.addEventListener('close', mark);
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+    $$('a', dlg).forEach((a) => a.addEventListener('click', mark));
+    $$('[data-ask]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); dlg.showModal(); }));
+  }
+
+  // newest first, or from the start
+  const flip = $('#flip'), tl = $('.tl');
+  if (flip) flip.addEventListener('click', () => {
+    const rev = tl.classList.toggle('rev');
+    flip.setAttribute('aria-pressed', String(rev));
+    flip.lastChild.textContent = rev ? 'From the start' : 'Newest first';
+    const bar = $('.bar'); $$('.pill.yr', bar).reverse().forEach((a) => bar.insertBefore(a, $('.sep', bar)));
+  });
+
+  // the year you're in lights up as you scroll
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      $$('.pill.yr').forEach((a) => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+    }), { rootMargin: '-130px 0px -70% 0px' });
+    $$('.year').forEach((y) => io.observe(y));
+  }
+})();
+</script>
 </body>
 </html>

@@ -5,8 +5,10 @@ my apprenticeship emails: **Home** (my goal: apprentice hours toward a C-6, E-2 
 Jan 1, 2027; what comes with me on top of learning the trade; my technical skill set and why the trades), **Work** (the
 software behind the home-services business I ran over summer 2026, FOCUS as my personal ERP, and both internships shown
 with drawn mock-ups), **Projects** (research that turns into leads, tools and models, the power-grid AI and how I
-work) and **Resume** (a work timeline you can hover and click, the details, skills and the PDF). It lives in its own folder, `docs/portfolio/`, so the
-bigger site can wrap around it later; until that site exists, the domain's front page forwards to it.
+work) and **Resume** (a work timeline you can hover and click, the details, skills and the PDF). It lives in its own folder, `docs/portfolio/`.
+
+Since Nov 10, 2026 the domain's front page is the site's own (see **The front page** below): a welcome with four looks
+(the trades, sports, skills and career, FOCUS) and one timeline to scroll. The trades look leads to this portfolio.
 
 **Live at:** https://malachicollins.org/portfolio/ (GitHub Pages, from the `docs/` folder of this repo's `main` branch;
 the domain was registered at Squarespace on Nov 1, 2026 and pointed here on Nov 5, 2026). The old address,
@@ -17,7 +19,10 @@ Nothing goes live until a change is pushed, and a change is pushed only when I s
 
 | Path | What it is |
 |---|---|
-| `docs/` | Everything GitHub Pages publishes. `index.html` forwards to the portfolio for now; `404.html` is the not-found page |
+| `docs/` | Everything GitHub Pages publishes. `index.html` is the front page (built, don't edit it by hand); `404.html` is the not-found page |
+| `tools/front/content.py` | The front page's content: the four looks and every entry on the timeline |
+| `tools/front/build.py` | Draws `docs/index.html` from that content |
+| `docs/assets/img/` | The front page's pictures |
 | `docs/portfolio/` | The portfolio section, self-contained: `index.html`, `work.html`, `projects.html`, `resume.html` |
 | `docs/portfolio/assets/site.css` | The one stylesheet: phone-first, light and dark follow the device, motion only when the device allows it |
 | `docs/portfolio/assets/site.js` | Small touches of motion (fade-ins, count-ups, a pointer spotlight). Every page works without it |
@@ -28,6 +33,26 @@ Nothing goes live until a change is pushed, and a change is pushed only when I s
 | `tools/resume_pdf.py` | Rebuilds the resume PDF from the Word file |
 | `tools/make_images.py` | Redraws the phone icon and the link-preview card |
 | `scripts/changelog.py` | Writes CHANGELOG.md and tags a release a day, the same as my other repos |
+
+## The front page
+
+What people see at https://malachicollins.org/: what I want shown, not everything about me.
+
+- **The welcome.** On arrival it asks "Take a look into": The trades, Sports, Skills & career, FOCUS, or just looking
+  around. The trades door goes straight to the portfolio, for the people my apprenticeship emails send here. It shows once
+  per visit; a link to a part of the page (like `/#career`) skips it.
+- **The four looks.** Picking one opens it (a line, a few numbers, where it leads) and narrows the timeline to it.
+  `/#trade`, `/#sports`, `/#career` and `/#focus` open a look directly.
+- **The timeline.** One scroll, newest first (or from the start), a year at a time, every entry with its picture.
+
+To change it: edit `tools/front/content.py`, then
+
+```bash
+python3 tools/front/build.py --out docs/index.html
+```
+
+A picture for an entry: save it in `docs/assets/img/` and name it in that entry's `"image"`. Without one, the entry shows
+its icon. The same rules as below decide what goes on it; an entry goes in only on my yes.
 
 ## Move it to malachicollins.org
 
