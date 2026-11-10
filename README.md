@@ -44,6 +44,9 @@ What people see at https://malachicollins.org/: what I want shown, not everythin
 - **The four looks.** Picking one opens it (a line, a few numbers, where it leads) and narrows the timeline to it.
   `/#trade`, `/#sports`, `/#career` and `/#focus` open a look directly.
 - **The timeline.** One scroll, newest first (or from the start), a year at a time, every entry with its picture.
+- **Sign in and Developer mode.** The page asks my private hub one thing: is this device signed in? Signed out, a small
+  Sign in link shows in the footer; signed in, a Developer mode button shows in the top bar and opens the hub. The hub
+  does the checking, not this page, and while the hub isn't up neither shows.
 
 To change it: edit `tools/front/content.py`, then
 

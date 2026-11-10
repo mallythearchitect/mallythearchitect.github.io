@@ -70,6 +70,9 @@ ul,ol{padding:0;list-style:none}
 .top nav a{font-size:15px;font-weight:600;text-decoration:none;padding:8px 10px;border-radius:10px;color:var(--ink-2)}
 .top nav a:hover{background:var(--wash);color:var(--ink)}
 @media (max-width:720px){.top nav a.hide-s{display:none}}
+.top nav a.dev{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:var(--page);font-weight:700;margin-left:6px}
+.top nav a.dev:hover{background:var(--ink);color:var(--page);opacity:.88}
+.top nav a.dev .icon{width:16px;height:16px}
 .review{background:var(--ink);color:var(--page);font-size:14px;font-weight:600;text-align:center;padding:8px 16px}
 
 .hero{padding:40px 0 22px;display:grid;gap:22px;align-items:center}
@@ -249,6 +252,21 @@ JS = r"""
     $$('[data-ask]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); dlg.showModal(); }));
   }
 
+  // Developer mode. The private hub answers one question for this page: is this device signed in? Only then does the
+  // button show, and the hub checks again when it is opened. Nothing shows while the hub isn't up.
+  const site = location.hostname.replace(/^www\./, '');
+  if (location.protocol === 'https:' && site.indexOf('.') > 0) {
+    const hub = 'https://hub.' + site, here = encodeURIComponent(location.origin + '/');
+    fetch(hub + '/__door/whoami', { credentials: 'include' }).then((r) => r.json()).then((s) => {
+      if (s.signed_in) {
+        $('#dev').href = hub + '/'; $('#dev').hidden = false;
+        $('#signout').href = hub + '/__door/logout?next=' + here; $('#signout').hidden = false;
+      } else if (s.signed_in === false) {
+        $('#signin').href = hub + '/__door/login?next=' + here; $('#signin').hidden = false;
+      }
+    }).catch(() => {});
+  }
+
   // newest first, or from the start
   const flip = $('#flip'), tl = $('.tl');
   if (flip) flip.addEventListener('click', () => {
@@ -402,7 +420,7 @@ def build(content, icons: dict, review: bool, portfolio: str, site: Path, inline
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
 <a class="brand" href="#main"><span class="mono">MC</span><span>Malachi Collins</span></a>
-<nav aria-label="Main">{"".join(f'<a class="hide-s" href="#{k}" data-lens-link="{k}">{E(lenses[k][0])}</a>' for k in lenses)}<a href="#timeline" data-lens-link="all">Timeline</a></nav>
+<nav aria-label="Main">{"".join(f'<a class="hide-s" href="#{k}" data-lens-link="{k}">{E(lenses[k][0])}</a>' for k in lenses)}<a href="#timeline" data-lens-link="all">Timeline</a><a class="dev" id="dev" href="#" hidden>{icon("code")}Developer mode</a></nav>
 </div></header>
 {review_bar}
 <main id="main">
@@ -427,7 +445,7 @@ def build(content, icons: dict, review: bool, portfolio: str, site: Path, inline
 </div>
 </main>
 <footer><div class="wrap"><span>Malachi Collins · Hartford, CT</span>
-<nav aria-label="Links"><a href="{E(portfolio)}">Trades portfolio</a><a href="https://www.linkedin.com/in/malachi-collins/" rel="noopener">LinkedIn</a><a href="mailto:malachibcollins@gmail.com">Email</a><a href="#" data-ask>Welcome</a></nav>
+<nav aria-label="Links"><a href="{E(portfolio)}">Trades portfolio</a><a href="https://www.linkedin.com/in/malachi-collins/" rel="noopener">LinkedIn</a><a href="mailto:malachibcollins@gmail.com">Email</a><a href="#" data-ask>Welcome</a><a id="signin" href="#" hidden>Sign in</a><a id="signout" href="#" hidden>Sign out</a></nav>
 </div></footer>
 {ask}
 <script>{JS}</script>

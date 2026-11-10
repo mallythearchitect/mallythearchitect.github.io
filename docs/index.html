@@ -44,6 +44,9 @@ ul,ol{padding:0;list-style:none}
 .top nav a{font-size:15px;font-weight:600;text-decoration:none;padding:8px 10px;border-radius:10px;color:var(--ink-2)}
 .top nav a:hover{background:var(--wash);color:var(--ink)}
 @media (max-width:720px){.top nav a.hide-s{display:none}}
+.top nav a.dev{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:var(--page);font-weight:700;margin-left:6px}
+.top nav a.dev:hover{background:var(--ink);color:var(--page);opacity:.88}
+.top nav a.dev .icon{width:16px;height:16px}
 .review{background:var(--ink);color:var(--page);font-size:14px;font-weight:600;text-align:center;padding:8px 16px}
 
 .hero{padding:40px 0 22px;display:grid;gap:22px;align-items:center}
@@ -185,7 +188,7 @@ background:transparent;color:var(--ink);font:650 15.5px var(--font);cursor:point
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
 <a class="brand" href="#main"><span class="mono">MC</span><span>Malachi Collins</span></a>
-<nav aria-label="Main"><a class="hide-s" href="#trade" data-lens-link="trade">The trades</a><a class="hide-s" href="#sports" data-lens-link="sports">Sports</a><a class="hide-s" href="#career" data-lens-link="career">Skills &amp; career</a><a class="hide-s" href="#focus" data-lens-link="focus">FOCUS</a><a href="#timeline" data-lens-link="all">Timeline</a></nav>
+<nav aria-label="Main"><a class="hide-s" href="#trade" data-lens-link="trade">The trades</a><a class="hide-s" href="#sports" data-lens-link="sports">Sports</a><a class="hide-s" href="#career" data-lens-link="career">Skills &amp; career</a><a class="hide-s" href="#focus" data-lens-link="focus">FOCUS</a><a href="#timeline" data-lens-link="all">Timeline</a><a class="dev" id="dev" href="#" hidden><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8.5 8-4 4 4 4M15.5 8l4 4-4 4M13.5 5.5l-3 13"/></svg>Developer mode</a></nav>
 </div></header>
 
 <main id="main">
@@ -210,7 +213,7 @@ background:transparent;color:var(--ink);font:650 15.5px var(--font);cursor:point
 </div>
 </main>
 <footer><div class="wrap"><span>Malachi Collins · Hartford, CT</span>
-<nav aria-label="Links"><a href="portfolio/">Trades portfolio</a><a href="https://www.linkedin.com/in/malachi-collins/" rel="noopener">LinkedIn</a><a href="mailto:malachibcollins@gmail.com">Email</a><a href="#" data-ask>Welcome</a></nav>
+<nav aria-label="Links"><a href="portfolio/">Trades portfolio</a><a href="https://www.linkedin.com/in/malachi-collins/" rel="noopener">LinkedIn</a><a href="mailto:malachibcollins@gmail.com">Email</a><a href="#" data-ask>Welcome</a><a id="signin" href="#" hidden>Sign in</a><a id="signout" href="#" hidden>Sign out</a></nav>
 </div></footer>
 <dialog id="ask" aria-labelledby="ask-h"><div class="ask">
 <form method="dialog"><button class="close" aria-label="Close"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></form>
@@ -258,6 +261,21 @@ background:transparent;color:var(--ink);font:650 15.5px var(--font);cursor:point
     dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
     $$('a', dlg).forEach((a) => a.addEventListener('click', mark));
     $$('[data-ask]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); dlg.showModal(); }));
+  }
+
+  // Developer mode. The private hub answers one question for this page: is this device signed in? Only then does the
+  // button show, and the hub checks again when it is opened. Nothing shows while the hub isn't up.
+  const site = location.hostname.replace(/^www\./, '');
+  if (location.protocol === 'https:' && site.indexOf('.') > 0) {
+    const hub = 'https://hub.' + site, here = encodeURIComponent(location.origin + '/');
+    fetch(hub + '/__door/whoami', { credentials: 'include' }).then((r) => r.json()).then((s) => {
+      if (s.signed_in) {
+        $('#dev').href = hub + '/'; $('#dev').hidden = false;
+        $('#signout').href = hub + '/__door/logout?next=' + here; $('#signout').hidden = false;
+      } else if (s.signed_in === false) {
+        $('#signin').href = hub + '/__door/login?next=' + here; $('#signin').hidden = false;
+      }
+    }).catch(() => {});
   }
 
   // newest first, or from the start
