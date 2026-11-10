@@ -127,6 +127,19 @@ text-decoration:none;overflow:hidden;transition:translate .15s,box-shadow .15s}
 .steps span{display:inline-flex;align-items:center;margin-right:10px}
 .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .panel figure{border-radius:16px;overflow:hidden;border:1px solid var(--ring);box-shadow:var(--shadow)}
+.feed{grid-column:1/-1;display:grid;gap:18px}
+.feed h3{font-size:13px;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px}
+.feats{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.feat{display:block;background:var(--page);border:1px solid var(--ring);border-radius:14px;padding:12px;text-decoration:none;overflow:hidden;overflow-wrap:anywhere}
+a.feat:hover,a.row:hover{border-color:var(--axis)}
+.feat b{display:block;font-size:clamp(22px,4vw,30px);letter-spacing:-.03em;line-height:1.05;font-weight:820}
+.feat span{display:block;font-size:14px;font-weight:650;line-height:1.25;margin-top:5px}
+.feat small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.rows{display:grid;gap:6px}
+.row{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:10px 12px;border-radius:12px;background:var(--page);border:1px solid var(--ring);
+text-decoration:none;font-weight:650;font-size:15.5px}
+.row small{color:var(--muted);font-weight:600;font-size:13px;text-align:right}
+.row span{overflow-wrap:anywhere}
 .panel figcaption{font-size:12.5px;color:var(--muted);padding:8px 10px;background:var(--page)}
 
 /* the timeline */
@@ -267,6 +280,53 @@ JS = r"""
     }).catch(() => {});
   }
 
+  // The bridge. My Sports and Career engines each publish a feed from the private side: only what I switched on there
+  // and pressed Publish for. This page shows it. Until a feed exists, or while the server isn't up, nothing changes here.
+  // Everything from a feed is written as text, and a link is used only when it is an https address.
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = String(text); return e; };
+  const https = (u) => (typeof u === 'string' && /^https:\/\/[^\s]+$/.test(u) ? u : null);
+  const month = (d) => { const t = new Date(d + 'T00:00:00'); return isNaN(t) ? '' : t.toLocaleDateString(undefined, { month: 'short', year: 'numeric' }); };
+  const bits = (...xs) => xs.filter(Boolean).join(' · ');
+  const part = (box, title) => { const s = el('div'); s.append(el('h3', '', title)); box.append(s); return s; };
+  const rows = (box, title, list, make) => {
+    if (!list.length) return;
+    const g = el('div', 'rows');
+    list.forEach((x) => { const [text, side, url] = make(x); const r = el(https(url) ? 'a' : 'div', 'row'); if (https(url)) { r.href = url; r.rel = 'noopener'; }
+      r.append(el('span', '', text), el('small', '', side)); g.append(r); });
+    part(box, title).append(g);
+  };
+  const chips = (box, title, list) => { if (!list.length) return; const g = el('div', 'tags'); list.forEach((t) => g.append(el('span', '', t))); part(box, title).append(g); };
+  const items = (sec, k) => ((sec[k] || {}).items || []).filter((x) => x && typeof x === 'object');
+  const feeds = {
+    sports(box, sec) {
+      const feats = items(sec, 'stats').slice(0, 12);
+      if (feats.length) {
+        const g = el('div', 'feats');
+        feats.forEach((x) => { const c = el(https(x.url) ? 'a' : 'div', 'feat'); if (https(x.url)) { c.href = x.url; c.rel = 'noopener'; }
+          c.append(el('b', '', x.value || x.kind || ''), el('span', '', x.name || ''), el('small', '', bits(x.activity, x.date && month(x.date)))); g.append(c); });
+        part(box, 'Feats and stats').append(g);
+      }
+      rows(box, 'Clips', items(sec, 'media').slice(0, 8), (x) => [x.title || '', bits(x.platform, typeof x.views === 'number' && `${new Intl.NumberFormat(undefined, { notation: 'compact' }).format(x.views)} views`), x.url]);
+      rows(box, 'Events', items(sec, 'events').slice(0, 6), (x) => [x.name || '', bits(x.result, x.date && month(x.date)), x.url]);
+      chips(box, 'What I do', items(sec, 'activities').map((x) => x.name).filter(Boolean).slice(0, 16));
+    },
+    career(box, sec) {
+      const skills = items(sec, 'skills').sort((a, b) => (b.level || 0) - (a.level || 0)).map((x) => x.name).filter(Boolean).slice(0, 24);
+      chips(box, 'Skill sets', skills);
+      rows(box, 'Projects', items(sec, 'projects').slice(0, 10), (x) => [x.name || '', bits(x.outcome, x.kind, x.date && month(x.date)), x.url]);
+    },
+  };
+  if (location.protocol === 'https:' && site.indexOf('.') > 0) {
+    Object.keys(feeds).forEach((k) => {
+      fetch(`https://${k}.${site}/public/feed.json`).then((r) => (r.ok ? r.json() : null)).then((f) => {
+        const box = $(`.feed[data-feed="${k}"]`);
+        if (!box || !f || typeof f.sections !== 'object' || !f.sections) return;
+        feeds[k](box, f.sections);
+        box.hidden = !box.children.length;
+      }).catch(() => {});
+    });
+  }
+
   // newest first, or from the start
   const flip = $('#flip'), tl = $('.tl');
   if (flip) flip.addEventListener('click', () => {
@@ -341,7 +401,8 @@ def build(content, icons: dict, review: bool, portfolio: str, site: Path, inline
         if p.get("image"):
             f, alt = p["image"]
             right = f'<figure><img src="{img(f)}" alt="{E(alt)}" loading="lazy" width="1600" height="1000"><figcaption>Demo data: every name and number in this picture is made up.</figcaption></figure>'
-        return (f'<section class="panel{"" if right else " solo"}" id="{k}" style="--c:var(--s-{k})"><div>{"".join(left)}</div>{right}</section>')
+        feed = f'<div class="feed" data-feed="{k}" hidden></div>' if k in ("sports", "career") else ""
+        return (f'<section class="panel{"" if right else " solo"}" id="{k}" style="--c:var(--s-{k})"><div>{"".join(left)}</div>{right}{feed}</section>')
 
     def card(e: dict, n: int) -> str:
         going = e["end"] == "now"

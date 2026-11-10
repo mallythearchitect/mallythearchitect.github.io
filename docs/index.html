@@ -101,6 +101,19 @@ text-decoration:none;overflow:hidden;transition:translate .15s,box-shadow .15s}
 .steps span{display:inline-flex;align-items:center;margin-right:10px}
 .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .panel figure{border-radius:16px;overflow:hidden;border:1px solid var(--ring);box-shadow:var(--shadow)}
+.feed{grid-column:1/-1;display:grid;gap:18px}
+.feed h3{font-size:13px;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px}
+.feats{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.feat{display:block;background:var(--page);border:1px solid var(--ring);border-radius:14px;padding:12px;text-decoration:none;overflow:hidden;overflow-wrap:anywhere}
+a.feat:hover,a.row:hover{border-color:var(--axis)}
+.feat b{display:block;font-size:clamp(22px,4vw,30px);letter-spacing:-.03em;line-height:1.05;font-weight:820}
+.feat span{display:block;font-size:14px;font-weight:650;line-height:1.25;margin-top:5px}
+.feat small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.rows{display:grid;gap:6px}
+.row{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:10px 12px;border-radius:12px;background:var(--page);border:1px solid var(--ring);
+text-decoration:none;font-weight:650;font-size:15.5px}
+.row small{color:var(--muted);font-weight:600;font-size:13px;text-align:right}
+.row span{overflow-wrap:anywhere}
 .panel figcaption{font-size:12.5px;color:var(--muted);padding:8px 10px;background:var(--page)}
 
 /* the timeline */
@@ -202,7 +215,7 @@ background:transparent;color:var(--ink);font:650 15.5px var(--font);cursor:point
 <div class="shot"><img src="assets/img/headshot.webp" width="480" height="480" alt="Malachi Collins"></div>
 </section>
 <nav class="doors" aria-label="Take a look into"><a class="door" style="--c:var(--s-trade)" href="#trade" data-lens-link="trade"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5.2 5.2L11 20.4a2 2 0 0 1-2.8 0l-.6-.6a2 2 0 0 1 0-2.8l8.7-8.7a4 4 0 0 0-5.2-5.2l2.6 2.6z"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>The trades</b><span>My path into a trade</span></a><a class="door" style="--c:var(--s-sports)" href="#sports" data-lens-link="sports"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5.5a4 4 0 0 1-8 0z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.6 4M16 6h2.5a2.5 2.5 0 0 1-2.6 4M12 13.5V17M8.5 20h7M9.5 17h5v3h-5z"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>Sports</b><span>Feats, tricks and progress</span></a><a class="door" style="--c:var(--s-career)" href="#career" data-lens-link="career"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>Skills &amp; career</b><span>Skill sets, projects, experience</span></a><a class="door" style="--c:var(--s-focus)" href="#focus" data-lens-link="focus"><svg class="icon big" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/><path d="M12 1.5v4M12 18.5v4M1.5 12h4M18.5 12h4"/></svg><svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><b>FOCUS</b><span>The analytics tools I build</span></a></nav>
-<section class="panel solo" id="trade" style="--c:var(--s-trade)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5.2 5.2L11 20.4a2 2 0 0 1-2.8 0l-.6-.6a2 2 0 0 1 0-2.8l8.7-8.7a4 4 0 0 0-5.2-5.2l2.6 2.6z"/></svg>A look into</div><h2>The trades</h2><p class="line">A trade to go with the software. I&#x27;m looking for part-time apprentice hours toward a Connecticut C-6, E-2 or P-2 license.</p><div class="nums"><div class="num"><b>24</b><span>paid jobs</span><small>my own business, summer 2026</small></div><div class="num"><b>$3,345</b><span>billed</span><small>in under 2 months</small></div><div class="num"><b>Jan 1, 2027</b><span>ready to start</span><small>15–20 hours a week</small></div></div><div class="acts"><a class="btn primary" href="portfolio/">Open the trades portfolio<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="panel solo" id="sports" style="--c:var(--s-sports)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5.5a4 4 0 0 1-8 0z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.6 4M16 6h2.5a2.5 2.5 0 0 1-2.6 4M12 13.5V17M8.5 20h7M9.5 17h5v3h-5z"/></svg>A look into</div><h2>Sports</h2><p class="line">Documenting the progress: the feats, the tricks, and the numbers behind them.</p></div></section><section class="panel solo" id="career" style="--c:var(--s-career)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg>A look into</div><h2>Skills &amp; career</h2><p class="line">What I can do and where I&#x27;ve done it: data, reporting, tools and the people side.</p><div class="nums"><div class="num"><b>7</b><span>jobs and internships</span><small>since 2021</small></div><div class="num"><b>2</b><span>certifications</span><small>AWS Cloud Practitioner, Security+</small></div><div class="num"><b>200K+</b><span>views on posts I made</span><small>39 posts, 2 platforms</small></div></div><div class="tags"><span>Python</span><span>SQL</span><span>Power BI</span><span>Excel</span><span>AWS</span><span>Dashboards</span><span>Forecasting</span><span>HTML, CSS &amp; JavaScript</span><span>Git &amp; GitHub</span><span>Project leadership</span><span>Sales</span><span>Marketing</span></div><div class="acts"><a class="btn primary" href="portfolio/assets/Malachi-Collins-Resume.pdf"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9.5 14.5 12 17l2.5-2.5"/></svg>Resume (PDF)</a><a class="btn" href="https://www.linkedin.com/in/malachi-collins/" rel=noopener><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.25v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></svg>LinkedIn</a></div></div></section><section class="panel" id="focus" style="--c:var(--s-focus)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/><path d="M12 1.5v4M12 18.5v4M1.5 12h4M18.5 12h4"/></svg>A look into</div><h2>FOCUS</h2><p class="line">FOCUS is the analytics engine I built for myself. It tracks, analyzes, predicts, and runs jobs on its own.</p><div class="nums"><div class="num"><b>330</b><span>automated tests</span><small>run before every saved change</small></div><div class="num"><b>34</b><span>design decisions</span><small>written down, each with its reason</small></div><div class="num"><b>170+</b><span>saved changes</span><small>since Sep 27, 2026</small></div></div><div class="steps"><span><i>1</i>Track</span><span><i>2</i>Analyze</span><span><i>3</i>Predict</span><span><i>4</i>Run on its own</span></div></div><figure><img src="assets/img/focus-home.webp" alt="The FOCUS home screen: a search box and a row of app tiles. Demo data: every name and number is made up." loading="lazy" width="1600" height="1000"><figcaption>Demo data: every name and number in this picture is made up.</figcaption></figure></section>
+<section class="panel solo" id="trade" style="--c:var(--s-trade)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5.2 5.2L11 20.4a2 2 0 0 1-2.8 0l-.6-.6a2 2 0 0 1 0-2.8l8.7-8.7a4 4 0 0 0-5.2-5.2l2.6 2.6z"/></svg>A look into</div><h2>The trades</h2><p class="line">A trade to go with the software. I&#x27;m looking for part-time apprentice hours toward a Connecticut C-6, E-2 or P-2 license.</p><div class="nums"><div class="num"><b>24</b><span>paid jobs</span><small>my own business, summer 2026</small></div><div class="num"><b>$3,345</b><span>billed</span><small>in under 2 months</small></div><div class="num"><b>Jan 1, 2027</b><span>ready to start</span><small>15–20 hours a week</small></div></div><div class="acts"><a class="btn primary" href="portfolio/">Open the trades portfolio<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="panel solo" id="sports" style="--c:var(--s-sports)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5.5a4 4 0 0 1-8 0z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.6 4M16 6h2.5a2.5 2.5 0 0 1-2.6 4M12 13.5V17M8.5 20h7M9.5 17h5v3h-5z"/></svg>A look into</div><h2>Sports</h2><p class="line">Documenting the progress: the feats, the tricks, and the numbers behind them.</p></div><div class="feed" data-feed="sports" hidden></div></section><section class="panel solo" id="career" style="--c:var(--s-career)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg>A look into</div><h2>Skills &amp; career</h2><p class="line">What I can do and where I&#x27;ve done it: data, reporting, tools and the people side.</p><div class="nums"><div class="num"><b>7</b><span>jobs and internships</span><small>since 2021</small></div><div class="num"><b>2</b><span>certifications</span><small>AWS Cloud Practitioner, Security+</small></div><div class="num"><b>200K+</b><span>views on posts I made</span><small>39 posts, 2 platforms</small></div></div><div class="tags"><span>Python</span><span>SQL</span><span>Power BI</span><span>Excel</span><span>AWS</span><span>Dashboards</span><span>Forecasting</span><span>HTML, CSS &amp; JavaScript</span><span>Git &amp; GitHub</span><span>Project leadership</span><span>Sales</span><span>Marketing</span></div><div class="acts"><a class="btn primary" href="portfolio/assets/Malachi-Collins-Resume.pdf"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9.5 14.5 12 17l2.5-2.5"/></svg>Resume (PDF)</a><a class="btn" href="https://www.linkedin.com/in/malachi-collins/" rel=noopener><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.25v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></svg>LinkedIn</a></div></div><div class="feed" data-feed="career" hidden></div></section><section class="panel" id="focus" style="--c:var(--s-focus)"><div><div class="kicker"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/><path d="M12 1.5v4M12 18.5v4M1.5 12h4M18.5 12h4"/></svg>A look into</div><h2>FOCUS</h2><p class="line">FOCUS is the analytics engine I built for myself. It tracks, analyzes, predicts, and runs jobs on its own.</p><div class="nums"><div class="num"><b>330</b><span>automated tests</span><small>run before every saved change</small></div><div class="num"><b>34</b><span>design decisions</span><small>written down, each with its reason</small></div><div class="num"><b>170+</b><span>saved changes</span><small>since Sep 27, 2026</small></div></div><div class="steps"><span><i>1</i>Track</span><span><i>2</i>Analyze</span><span><i>3</i>Predict</span><span><i>4</i>Run on its own</span></div></div><figure><img src="assets/img/focus-home.webp" alt="The FOCUS home screen: a search box and a row of app tiles. Demo data: every name and number is made up." loading="lazy" width="1600" height="1000"><figcaption>Demo data: every name and number in this picture is made up.</figcaption></figure></section>
 
 <section class="block" id="timeline">
 <div class="head"><div><h2>The timeline</h2><p>Scroll it: now, back to 2021.</p></div></div>
@@ -276,6 +289,53 @@ background:transparent;color:var(--ink);font:650 15.5px var(--font);cursor:point
         $('#signin').href = hub + '/__door/login?next=' + here; $('#signin').hidden = false;
       }
     }).catch(() => {});
+  }
+
+  // The bridge. My Sports and Career engines each publish a feed from the private side: only what I switched on there
+  // and pressed Publish for. This page shows it. Until a feed exists, or while the server isn't up, nothing changes here.
+  // Everything from a feed is written as text, and a link is used only when it is an https address.
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = String(text); return e; };
+  const https = (u) => (typeof u === 'string' && /^https:\/\/[^\s]+$/.test(u) ? u : null);
+  const month = (d) => { const t = new Date(d + 'T00:00:00'); return isNaN(t) ? '' : t.toLocaleDateString(undefined, { month: 'short', year: 'numeric' }); };
+  const bits = (...xs) => xs.filter(Boolean).join(' · ');
+  const part = (box, title) => { const s = el('div'); s.append(el('h3', '', title)); box.append(s); return s; };
+  const rows = (box, title, list, make) => {
+    if (!list.length) return;
+    const g = el('div', 'rows');
+    list.forEach((x) => { const [text, side, url] = make(x); const r = el(https(url) ? 'a' : 'div', 'row'); if (https(url)) { r.href = url; r.rel = 'noopener'; }
+      r.append(el('span', '', text), el('small', '', side)); g.append(r); });
+    part(box, title).append(g);
+  };
+  const chips = (box, title, list) => { if (!list.length) return; const g = el('div', 'tags'); list.forEach((t) => g.append(el('span', '', t))); part(box, title).append(g); };
+  const items = (sec, k) => ((sec[k] || {}).items || []).filter((x) => x && typeof x === 'object');
+  const feeds = {
+    sports(box, sec) {
+      const feats = items(sec, 'stats').slice(0, 12);
+      if (feats.length) {
+        const g = el('div', 'feats');
+        feats.forEach((x) => { const c = el(https(x.url) ? 'a' : 'div', 'feat'); if (https(x.url)) { c.href = x.url; c.rel = 'noopener'; }
+          c.append(el('b', '', x.value || x.kind || ''), el('span', '', x.name || ''), el('small', '', bits(x.activity, x.date && month(x.date)))); g.append(c); });
+        part(box, 'Feats and stats').append(g);
+      }
+      rows(box, 'Clips', items(sec, 'media').slice(0, 8), (x) => [x.title || '', bits(x.platform, typeof x.views === 'number' && `${new Intl.NumberFormat(undefined, { notation: 'compact' }).format(x.views)} views`), x.url]);
+      rows(box, 'Events', items(sec, 'events').slice(0, 6), (x) => [x.name || '', bits(x.result, x.date && month(x.date)), x.url]);
+      chips(box, 'What I do', items(sec, 'activities').map((x) => x.name).filter(Boolean).slice(0, 16));
+    },
+    career(box, sec) {
+      const skills = items(sec, 'skills').sort((a, b) => (b.level || 0) - (a.level || 0)).map((x) => x.name).filter(Boolean).slice(0, 24);
+      chips(box, 'Skill sets', skills);
+      rows(box, 'Projects', items(sec, 'projects').slice(0, 10), (x) => [x.name || '', bits(x.outcome, x.kind, x.date && month(x.date)), x.url]);
+    },
+  };
+  if (location.protocol === 'https:' && site.indexOf('.') > 0) {
+    Object.keys(feeds).forEach((k) => {
+      fetch(`https://${k}.${site}/public/feed.json`).then((r) => (r.ok ? r.json() : null)).then((f) => {
+        const box = $(`.feed[data-feed="${k}"]`);
+        if (!box || !f || typeof f.sections !== 'object' || !f.sections) return;
+        feeds[k](box, f.sections);
+        box.hidden = !box.children.length;
+      }).catch(() => {});
+    });
   }
 
   // newest first, or from the start
