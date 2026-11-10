@@ -1,13 +1,15 @@
-# Changelog: Malachi Collins: portfolio
+# Changelog: Malachi Collins: my website
 
 Every saved change, newest first, in releases: one per day of work. Each release is a tag on GitHub (`vYYYY.MM.DD`, on the day's last change) and a GitHub release with the same list as its what-changed. A change that a later one took back out says so.
 
-Covers every saved change up to `e8a9439` (10 Nov 2026): 26 saved changes in 4 releases, from 1 Nov 2026 to 10 Nov 2026. Rebuilt with `python3 scripts/changelog.py --log-only`; once it is saved, `--tags-only`, `git push --follow-tags` and `--releases` tag the day and publish it, so the change that saves this file is tagged too.
+Covers every saved change up to `7d87020` (10 Nov 2026): 28 saved changes in 4 releases, from 1 Nov 2026 to 10 Nov 2026. Rebuilt with `python3 scripts/changelog.py --log-only`; once it is saved, `--tags-only`, `git push --follow-tags` and `--releases` tag the day and publish it, so the change that saves this file is tagged too.
 
 ## v2026.11.10 · Tuesday 10 November 2026
 
-6 saved changes
+8 saved changes
 
+- `7d87020` README brought up to date: the whole site, not only the portfolio
+- `305fb29` CHANGELOG.md: the day's changes
 - `e8a9439` The Sports and Skills & career looks show what my engines publish
 - `7d014f8` CHANGELOG.md: the day's changes
 - `bf3075c` Sign in and Developer mode on the front page
