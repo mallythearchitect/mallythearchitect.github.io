@@ -100,7 +100,8 @@ text-decoration:none;overflow:hidden;transition:translate .15s,box-shadow .15s}
 @media (min-width:900px){.door .big{width:140px;height:140px;right:-8px;top:-8px;stroke-width:1.2}}
 .door b{font-size:clamp(20px,3.4vw,26px);letter-spacing:-.025em;line-height:1.1;font-weight:800}
 .door span{font-size:14.5px;color:var(--ink-2);line-height:1.3}
-.door .go{position:absolute;left:16px;top:16px;width:22px;height:22px}
+.door .go{position:absolute;left:16px;top:16px;width:22px;height:22px;display:none}
+@media (min-width:900px){.door .go{display:block}.ask .door .go{display:none}}
 .door[aria-current="true"]{box-shadow:0 0 0 2px var(--ink)}
 
 /* a look, opened */
